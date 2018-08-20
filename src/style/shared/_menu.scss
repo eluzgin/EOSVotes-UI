@@ -1,0 +1,86 @@
+$menu_transition_duration: 0.5s;
+
+.menu {
+
+  background: color(dark);
+  bottom: 0;
+  color: lighten(color(dark), 50);
+  font-family: AvenirNext, sans-serif;
+  font-weight: bold;
+  left: 0;
+  padding: 2em;
+  padding-left: 2em + 3em;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform $menu_transition_duration/2 cubic-bezier(0.175, 0.885, 0.32, 1.175);
+  z-index: 101;
+
+  @include breakpoint(medium) {
+    padding: 2.8em 3.5em;
+    padding-left: 3.5em+3em;
+  }
+
+  &.visible {
+    transform: translateX(-3em);
+  }
+
+  &.leaving {
+    transform: translateX(-100%);
+  }
+
+  &__title {
+    @extend .title;
+    text-align: center;
+  }
+
+  &__list {
+    border-top: 0.3333em solid;
+    margin-top: 1.65em;
+    padding-top: 1em;
+
+    li + li {
+      border-top: 1px solid;
+    }
+
+    a {
+      display: block;
+      padding: 1.5em 0;
+      white-space: nowrap;
+    }
+  }
+
+  .icon {
+    font-size: 1.5em;
+    text-align: center;
+    width: 2.2em;
+  }
+
+  @include breakpoint(small only) {
+    font-size: 0.7em;
+  }
+
+}
+
+.menu-wrap {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.menu-overlay {
+  @extend .menu-wrap;
+  background: black;
+  opacity: 0;
+  transition: opacity $menu_transition_duration/2;
+
+  &.visible {
+    opacity: 0.25;
+  }
+
+}
+

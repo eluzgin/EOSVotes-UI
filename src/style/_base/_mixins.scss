@@ -1,0 +1,16 @@
+@import 'node_modules/foundation-sites/scss/util/unit';
+@import 'node_modules/foundation-sites/scss/util/breakpoint';
+
+@mixin responsive($property, $values, $important: null) {
+
+  $breakpoints: small, medium, large, xlarge, xxlarge;
+  $i: 0;
+
+  @each $val in $values {
+    $i: $i + 1;
+    @include breakpoint(nth($breakpoints, $i)) {
+      #{$property}: $val $important;
+    }
+  }
+
+}

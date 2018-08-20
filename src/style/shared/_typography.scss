@@ -1,0 +1,42 @@
+@each $name, $color in $brand {
+  .#{$name} {
+    color: $color;
+  }
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.uc {
+  text-transform: uppercase;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lead {
+  @include responsive(font-size, 1.05em 1.1em 1.2em);
+  font-weight: bold;
+}
+
+.title {
+  @include responsive(font-size, 1.2em 1.6em 1.9em);
+  font-family: AvenirNext, sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  opacity: 0.75;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.small {
+  font-size: 0.9em;
+}

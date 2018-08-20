@@ -1,0 +1,65 @@
+.card-collapsable {
+
+  @extend .card;
+  background: color(gray);
+  color: darken(color(gray), 70);
+  cursor: pointer;
+  position: relative;
+
+  &:before {
+    border-left: 0.2em solid darken(color(gray), 10);
+    bottom: -2px;
+    content: '';
+    left: -2px;
+    position: absolute;
+    top: -2px;
+
+    @include breakpoint(medium) {
+      border-left-width: 0.5em;
+    }
+  }
+
+  * + & {
+    @include responsive(margin-top, 1em 1.5em);
+  }
+
+  &__title {
+    @extend .title, .text-overflow;
+    padding-right: 1.5em;
+    position: relative;
+
+    @include breakpoint (small only) {
+      font-size: 1em !important;
+    }
+  }
+
+  &__chevron {
+    cursor: pointer;
+    font-size: 0.85em;
+    position: absolute;
+    right: 0.2em;
+    top: 0.175em;
+    transition: transform 0.2s;
+  }
+
+  &__body {
+    @extend .small-spacing;
+    @include responsive(padding-top, 1em 1.5em 2.2em);
+    border-top: 2px solid darken(color(gray), 10);
+  }
+
+  &--expanded {
+    cursor: inherit;
+
+    .card-collapsable__title {
+      white-space: normal;
+    }
+
+    .card-collapsable__chevron {
+      transform: scaleY(-1);
+    }
+
+  }
+
+}
+

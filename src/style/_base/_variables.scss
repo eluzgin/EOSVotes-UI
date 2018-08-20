@@ -1,0 +1,15 @@
+$font-size-base: 24px;
+$line-height-base: 1.75;
+
+$brand: (
+  dark: #2e2e2e,
+  gray: #e6e6e6,
+  green: #1f7853,
+  primary: #cfbf55,
+  red: #c42626,
+);
+
+@function color($key) {
+  @return map-get($brand, $key) or $key;
+}
+

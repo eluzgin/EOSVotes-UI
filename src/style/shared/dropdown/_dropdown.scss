@@ -1,0 +1,10 @@
+.dropdown {
+  @extend %reset;
+  background: url('shared/dropdown/chevron.svg') no-repeat 100% 50%;
+  background-size: 1.3em;
+  font-family: AvenirNext, sans-serif;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 1em 2em;
+  text-transform: uppercase;
+}

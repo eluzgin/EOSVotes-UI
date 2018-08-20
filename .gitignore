@@ -1,0 +1,7 @@
+*.sublime-*
+.DS_Store
+.env
+.idea
+node_modules
+dist
+makefile

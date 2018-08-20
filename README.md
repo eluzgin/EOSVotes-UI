@@ -1,2 +1,18 @@
-# EOSVotes-UI
-ReactJS front end for the EOSVotes.io community project.
+# Install
+
+```sh
+$ npm install
+```
+
+## Develop
+
+```sh
+$ npm start
+```
+
+## Production
+
+```sh
+$ npm run build
+```
+

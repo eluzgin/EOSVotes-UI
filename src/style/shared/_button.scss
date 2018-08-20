@@ -1,0 +1,53 @@
+.button {
+
+  border: 2px solid;
+  border-radius: 0.15em;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  padding: 0.9em 1.5em 0.7em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &.liquid-for-small {
+    @include breakpoint(small only) {
+      display: block;
+    }
+  }
+
+}
+
+.small-button {
+  @extend .button;
+  font-size: 0.9em;
+  padding-bottom: 0.2em;
+  padding-top: 0.5em;
+}
+
+.medium-button {
+
+  @extend .button;
+  font-weight: 500;
+  padding: 1.5em 1.5em 1.2em;
+
+  @include breakpoint(large) {
+    font-size: 1.2em;
+    letter-spacing: 0;
+  }
+
+}
+
+@each $name, $color in $brand {
+  .#{$name}-button {
+    @extend .button;
+    background: $color;
+    border-color: transparent;
+    transition: background 0.2s;
+
+    &:hover {
+      background: darken($color, 5);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.card {
+
+  @include responsive(padding, (
+    1em,
+    2em,
+    2.5em 3.8em,
+  ));
+
+  border: 2px solid color(gray);
+  border-radius: 0.15em;
+
+}
+
+.card-spacing {
+  @include responsive(margin-top, 1em 2em 2.5em);
+}
+

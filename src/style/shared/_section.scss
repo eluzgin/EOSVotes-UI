@@ -1,0 +1,7 @@
+.section {
+
+  @extend %section;
+  background: lighten(color(gray), 4.75);
+
+}
+

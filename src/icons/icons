@@ -1,0 +1,8 @@
+{
+    "files": ["./*.svg"],
+    "classPrefix": "icon-",
+    "baseSelector": ".icon",
+    "embed": true,
+    "fontName": "icon",
+    "types": ["woff"]
+}

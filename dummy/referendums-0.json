@@ -1,0 +1,60 @@
+{
+    "more": true,
+    "referendums": [
+        {
+            "author": "alex",
+            "copy": "I am an Ethereum developer and think all these rules about developer liability cramp my fast and loose approach to code. We need to get rid of this so I don’t get sued for creating security issues for my users and the network. Please vote now to make EOS more like Ethereum!",
+            "id": 1,
+            "thumbs_down": 2,
+            "thumbs_up": 48,
+            "time_left": 3,
+            "title": "Ammend Article XVI"
+        },
+        {
+            "author": "steve",
+            "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+            "id": 2,
+            "thumbs_down": 30,
+            "thumbs_up": 49,
+            "time_left": 29,
+            "title": "Ammend Article IV So VC Can Consolidate"
+        },
+        {
+            "author": "kulikov",
+            "copy": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+            "id": 3,
+            "thumbs_down": 60,
+            "thumbs_up": 33,
+            "time_left": 71,
+            "title": "Change EOS Namespaces To BOATYMCBOATFACE"
+        },
+        {
+            "author": "eosvotes",
+            "copy": "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "id": 4,
+            "thumbs_down": 2,
+            "thumbs_up": 84,
+            "time_left": 44,
+            "title": "Increase RAM To 1TB and stop the speculators"
+        },
+        {
+            "author": "ethbrogrammer",
+            "copy": "I am an Ethereum developer and think all these rules about developer liability cramp my fast and loose approach to code. We need to get rid of this so I don’t get sued for creating security issues for my users and the network. Please vote now to make EOS more like Ethereum!",
+            "id": 5,
+            "thumbs_down": 3,
+            "thumbs_up": 20,
+            "time_left": 30,
+            "title": "Increase Number of Standy Nodes from 49 to 121"
+        },
+        {
+            "author": "ethbrogrammer",
+            "copy": "I am an Ethereum developer and think all these rules about developer liability cramp my fast and loose approach to code. We need to get rid of this so I don’t get sued for creating security issues for my users and the network. Please vote now to make EOS more like Ethereum!",
+            "id": 6,
+            "thumbs_down": 26,
+            "thumbs_up": 45,
+            "time_left": 20,
+            "title": "Increase Number of Votes from 30 to 50"
+        }
+    ]
+
+}

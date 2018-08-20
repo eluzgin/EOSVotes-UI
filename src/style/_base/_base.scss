@@ -1,0 +1,85 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  background: color(gray);
+  font: 400 #{$font-size-base} / #{$line-height-base} HelveticaNeue, sans-serif;
+  font-smooth: always;
+  letter-spacing: 0.06em;
+  word-spacing: -0.06em;
+
+  @include breakpoint(small only) {
+    font-size: round($font-size-base*0.8);
+  }
+
+  @include breakpoint(medium only) {
+    font-size: round($font-size-base*0.9);
+  }
+}
+
+* + .spacing,
+* + p {
+  margin-top: 1em;
+}
+
+* + .small-spacing {
+  @include responsive(margin-top, 1em 1.5em 2.1em);
+}
+
+* + .medium-spacing {
+  @include responsive(margin-top, 1.5em 2em 2.3em);
+}
+
+svg,
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid darken(color(gray), 10);
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &,
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+%reset {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  font-size: 1em;
+  margin: 0;
+  outline: none;
+  padding: 0;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+%section {
+  @include responsive(padding, (
+    1.5em 1em,
+    2em 2.5em,
+    2.3em 2.85em,
+  ));
+}
+

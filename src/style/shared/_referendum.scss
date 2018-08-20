@@ -1,0 +1,26 @@
+.referendum {
+
+  &__body {
+    font-weight: 500;
+    line-height: 1.75;
+  }
+
+  &__controls {
+    @include responsive(font-size, 1em 1.1em 1.25em);
+  }
+
+  &__footer {
+    font-family: AvenirNext, sans-serif;
+
+    .icon {
+      @include responsive(font-size, 1em 1.25em 1.5em);
+      margin-right: 0.35em;
+    }
+
+    .icon-thumbs-down {
+      @include responsive(margin-left, 0.5em 1em 1.5em);
+    }
+
+  }
+
+}
