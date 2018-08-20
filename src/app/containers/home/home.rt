@@ -1,0 +1,56 @@
+<rt-import name="*" as="Containers" from="containers" />
+<rt-import name="*" as="Components" from="components" />
+
+<Components.Fragment>
+
+    <Containers.Header />
+
+    <section class="section">
+        <div class="container">
+
+            <div class="home-welcome card">
+                <div class="home-welcome__container">
+                    <div class="home-welcome__copy">
+                        <h1 class="title uc">Welcome to EOSVotes.io!</h1>
+                        <p>Welcome to the EOSVotes.io! A way for you to change the things you don’t like about EOS. Please click the links below to learn more about how to use this portal.</p>
+                    </div>
+                    <div class="spacing text-center">
+                        <span class="medium-button primary-button liquid-for-small">
+                            <span class="regular hide-for-medium">New? </span>
+                            <span class="regular show-for-medium">New to eos? <i class="home-welcome__chevron icon icon-chevron-right show-for-medium" /> </span>
+                            start here.
+                        </span>
+                    </div>
+                </div>
+                <div class="card-spacing">
+                    <p class="home-welcome__button-container">
+                        <a class="home-welcome__button">proxy vote</a>
+                        <a class="home-welcome__button">forum</a>
+                        <a class="home-welcome__button">referendum</a>
+                        <a class="home-welcome__button">worker proposals</a>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="hide-for-large" />
+
+            <Components.CardCollapsable rt-repeat="referendum in this.state.referendums" key={referendum.id} title={referendum.title}>
+                <Components.Referendum rt-props="referendum" />
+            </Components.CardCollapsable>
+
+            <p class="medium-spacing text-center" rt-if="this.state.more && !this.state.fetching">
+                <span class="medium-button liquid-for-small" onClick="e => this.fetch()">
+                    <i class="invisible">...</i> Load more ...
+                </span>
+            </p>
+
+            <p class="text-center uc" rt-if="this.state.fetching">
+                <i class="invisible">...</i> Loading ...
+            </p>
+
+        </div>
+    </section>
+
+    <Containers.Footer />
+
+</Components.Fragment>

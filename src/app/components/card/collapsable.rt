@@ -1,0 +1,12 @@
+<div class="card-collapsable" onClick="e => this.expand(e)" rt-class="{'card-collapsable--expanded': this.state.expanded}">
+
+    <div class="card-collapsable__title">
+        { this.props.title }
+        <i class="card-collapsable__chevron icon icon-chevron" onClick="e => this.toggle(e)" />
+    </div>
+
+    <div class="card-collapsable__body" rt-if="this.state.expanded">
+        { this.props.children }
+    </div>
+
+</div>

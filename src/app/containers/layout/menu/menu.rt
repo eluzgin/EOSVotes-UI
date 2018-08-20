@@ -1,0 +1,16 @@
+<rt-import name="Fragment" from="react" />
+
+<div class="menu-wrap" rt-if="this.state.on" onRef="e => console.warn(e)">
+    <div class="menu-overlay" rt-class="{visible: this.state.visible}" onClick="{this.props.onClose}" />
+    <div class="menu" rt-class="{visible: this.state.entered, leaving: this.state.leaving}">
+        <div class="menu__title">Menu</div>
+        <ul class="menu__list">
+            <li><a href="#"> <i class="icon icon-info"></i> Start here</a></li>
+            <li><a href="#"> <i class="icon icon-proxy"></i> Proxy vote</a></li>
+            <li><a href="#"> <i class="icon icon-forum"></i> Forum</a></li>
+            <li><a href="#"> <i class="icon icon-referendum"></i> Referendums</a></li>
+            <li><a href="#"> <i class="icon icon-proposal"></i> Worker proposal</a></li>
+            <li class="hide-for-large"><a href="#"> <i class="icon icon-login"></i> Login with Scatter</a></li>
+        </ul>
+    </div>
+</div>
