@@ -1,5 +1,6 @@
 import React from 'react';
-import { Home, Error503 } from 'containers';
+import { Error503 } from 'components';
+import { Home } from 'containers';
 
 export default class App extends React.Component {
 

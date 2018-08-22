@@ -1,4 +1,3 @@
-<rt-import name="*" as="Containers" from="containers" />
 <rt-import name="*" as="Components" from="components" />
 
 <Components.Fragment>
@@ -20,11 +19,22 @@
                 </div>
                 <!-- right -->
                 <span>
-                    <span class="button show-for-large small">
-                        Login with
+                    <a rt-if="!this.props.client" href="https://get-scatter.com/" target="new" class="button show-for-large small">
+                        Install
                         <span class="header__scatter">
                             <rt-include src="./scatter.svg" />
                         </span>
+                    </a>
+                    <span rt-if="this.props.client" onClick="()=>this.props.getIdentity()" class="button show-for-large small">
+                        <Components.Fragment rt-if="this.props.identity">
+                          Welcome {this.props.identity.name}
+                        </Components.Fragment>
+                        <Components.Fragment rt-if="!this.props.identity">
+                          Login With
+                          <span class="header__scatter">
+                              <rt-include src="./scatter.svg" />
+                          </span>
+                        </Components.Fragment>
                     </span>
                     <select class="header__language dropdown">
                         <option>eng</option>
@@ -35,6 +45,6 @@
         </div>
     </header>
 
-    <Containers.Menu on="{this.state.menu}" onClose="e => this.closeMenu()" />
+    <Components.Menu on="{this.state.menu}" onClose="e => this.closeMenu()" rt-props="this.props"/>
 
 </Components.Fragment>

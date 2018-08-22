@@ -5,6 +5,7 @@ const path = require('path');
 module.exports = {
 
   entry: [
+    'babel-polyfill',
     'style-loader!./src/style/vendor.scss',
     'style-loader!./src/style/style.scss',
     'style-loader!./src/icons/icons',
@@ -74,6 +75,8 @@ module.exports = {
     modules: [
       path.resolve('./src/app'),
       path.resolve('./node_modules'),
+      path.resolve(__dirname, "node_modules"),
+      'node_modules'
     ]
   },
 

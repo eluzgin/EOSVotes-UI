@@ -1,9 +1,8 @@
-<rt-import name="*" as="Containers" from="containers" />
 <rt-import name="*" as="Components" from="components" />
 
 <Components.Fragment>
 
-    <Containers.Header />
+    <Components.Header rt-props="this.props"/>
 
     <section class="section">
         <div class="container">
@@ -51,6 +50,6 @@
         </div>
     </section>
 
-    <Containers.Footer />
+    <Components.Footer />
 
 </Components.Fragment>
