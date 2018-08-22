@@ -2,9 +2,8 @@
   "name": "eosvotes",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --mode development",
-    "build": "./node_modules/webpack/bin/webpack.js --mode production",
-    "postinstall": "cp .env.example .env",
+    "start": "webpack-dev-server --hot --mode development",
+    "build": "webpack --mode production",
     "test": "exit 0"
   },
   "dependencies": {
