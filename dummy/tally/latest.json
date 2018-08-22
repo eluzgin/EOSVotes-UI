@@ -1,0 +1,66 @@
+{
+	"eoscanadacom:havefunornot": {
+		"active": true,
+		"blockNumber": 10188788,
+		"blockHash": "009b77f49b78ae40cd8c48462a931794a56fb8df7ab327ded343bb1c0bc572c6",
+		"firstBlockNumber": 7813567,
+		"firstBlockHash": "007739bf1c712721c79778a87f14e247aea13cccf7a8391f350b5230390d590e",
+		"votes": {
+			"0": 1,
+			"1": 2
+		},
+		"staked": {
+			"0": 14000,
+			"1": 390588
+		},
+		"last_vote_weight": {
+			"0": 5774245738.283412,
+			"1": 171618709929.0255
+		}
+	},
+	"aus1genereos:aretoolsredy": {
+		"active": true,
+		"blockNumber": 8554735,
+		"blockHash": "008288eff8f9da5142d74642273f831214b272f6b3c994258943231186a2a9ac",
+		"firstBlockNumber": 8554735,
+		"firstBlockHash": "008288eff8f9da5142d74642273f831214b272f6b3c994258943231186a2a9ac",
+		"votes": {},
+		"staked": {},
+		"last_vote_weight": {}
+	},
+	"gy2dcmbuhege:nuevogato": {
+		"active": true,
+		"blockNumber": 10188788,
+		"blockHash": "009b77f49b78ae40cd8c48462a931794a56fb8df7ab327ded343bb1c0bc572c6",
+		"firstBlockNumber": 9179364,
+		"firstBlockHash": "008c10e4753989af5f4e72396a576943d6a09f3572f3583d8fc537f2a14d7fa2",
+		"votes": {
+			"1": 1
+		},
+		"staked": {
+			"1": 246000
+		},
+		"last_vote_weight": {
+			"1": 102823260777.27234
+		}
+	},
+	"eostribeprod:bpminpayment": {
+		"active": true,
+		"blockNumber": 10188788,
+		"blockHash": "009b77f49b78ae40cd8c48462a931794a56fb8df7ab327ded343bb1c0bc572c6",
+		"firstBlockNumber": 9304570,
+		"firstBlockHash": "008df9fa103a5e0955085279af2df996d2d1cdb82c443eed8b016687a334ee4a",
+		"votes": {
+			"0": 8,
+			"1": 12
+		},
+		"staked": {
+			"0": 270956135,
+			"1": 762143235
+		},
+		"last_vote_weight": {
+			"0": 111622798625499.17,
+			"1": 313973592530119.7
+		}
+	}
+}
