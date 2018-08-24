@@ -58,6 +58,10 @@ strong {
   font-weight: bold;
 }
 
+.hoverable {
+  cursor: pointer;
+}
+
 %reset {
   appearance: none;
   background: none;
@@ -82,4 +86,3 @@ strong {
     2.3em 2.85em,
   ));
 }
-

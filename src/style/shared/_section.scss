@@ -1,7 +1,9 @@
 .section {
-
   @extend %section;
   background: lighten(color(gray), 4.75);
-
 }
 
+.error-section {
+  @extend .section;
+  padding: 15%;
+}

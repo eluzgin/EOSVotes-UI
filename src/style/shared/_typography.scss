@@ -28,7 +28,7 @@
   font-family: AvenirNext, sans-serif;
   font-weight: bold;
   letter-spacing: -0.01em;
-  line-height: 1.2;
+  line-height: 1.25;
   opacity: 0.75;
 }
 
@@ -39,4 +39,9 @@
 
 .small {
   font-size: 0.9em;
+}
+
+.error {
+  color: color(red);
+  font-family: AvenirNext, sans-serif;
 }

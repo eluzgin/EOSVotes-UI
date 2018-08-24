@@ -1,8 +1,11 @@
-import {combineReducers} from 'redux-immutable';
-import scatterReducer from 'store/scatter/reducer';
+import { combineReducers } from 'redux';
+import { filters } from './filters/reducer';
+import { page } from './page/reducer';
+import { referendums } from './referendums/reducer';
 
-const rootReducer = combineReducers({
-  scatter: scatterReducer,
+export default combineReducers({
+  filters,
+  page,
+  referendums,
 });
 
-export default rootReducer;

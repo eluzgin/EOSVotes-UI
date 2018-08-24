@@ -1,8 +1,23 @@
 .referendum {
 
   &__body {
-    font-weight: 500;
     line-height: 1.75;
+  }
+
+  &__url {
+    @extend .text-overflow;
+    background: white;
+    border-left: 2px solid color(primary);
+    display: block;
+    font-family: AvenirNext, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+
+    @include breakpoint(medium) {
+      border-left-width: 4px;
+      font-size: 1em;
+    }
   }
 
   &__controls {
@@ -10,6 +25,7 @@
   }
 
   &__footer {
+    @include responsive(font-size, 0.9em 1em);
     font-family: AvenirNext, sans-serif;
 
     .icon {

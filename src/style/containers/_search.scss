@@ -1,0 +1,25 @@
+.search {
+
+  position: relative;
+
+  &__input {
+    @extend %reset;
+    background: white;
+    box-sizing: border-box;
+    padding: 1.25em 4em 1em 1em;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__button {
+    @extend %reset;
+    color: color(gray);
+    cursor: pointer;
+    font-size: 2em;
+    margin-top: -0.5em;
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
+  }
+
+}

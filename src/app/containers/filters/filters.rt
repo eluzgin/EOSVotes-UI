@@ -1,0 +1,8 @@
+<ul rt-if="this.props.filters.length > 0" class="filters">
+    <li rt-repeat="filter in this.props.filters" key={filter}>
+        <span class="filters__tag" onClick="() => this.remove(filterIndex)">
+            <i class="filters__close icon icon-close" />
+            { filter }
+        </span>
+    </li>
+</ul>

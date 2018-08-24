@@ -1,0 +1,17 @@
+.menu .search {
+
+  margin-top: -0.2em;
+
+  &__input {
+    background: none;
+    border-bottom: 1px solid;
+    color: inherit;
+    font-size: 1.25em;
+    padding-left: 0;
+  }
+
+  &__button {
+    right: 0;
+  }
+
+}

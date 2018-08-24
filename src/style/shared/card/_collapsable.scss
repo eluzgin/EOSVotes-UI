@@ -6,31 +6,48 @@
   cursor: pointer;
   position: relative;
 
-  &:before {
-    border-left: 0.2em solid darken(color(gray), 10);
-    bottom: -2px;
-    content: '';
-    left: -2px;
-    position: absolute;
-    top: -2px;
-
-    @include breakpoint(medium) {
-      border-left-width: 0.5em;
-    }
+  * + & {
+    @include responsive(margin-top, 2px 1em 1.5em);
   }
 
-  * + & {
-    @include responsive(margin-top, 1em 1.5em);
+  @include breakpoint(small only) {
+    // bleed
+    border-radius: 0;
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+
+  @include breakpoint(medium) {
+    // left border
+    &:before {
+      border-left: 0.5em solid darken(color(gray), 10);
+      bottom: -2px;
+      content: '';
+      left: -2px;
+      position: absolute;
+      top: -2px;
+    }
   }
 
   &__title {
     @extend .title, .text-overflow;
     padding-right: 1.5em;
     position: relative;
+  }
 
-    @include breakpoint (small only) {
-      font-size: 1em !important;
-    }
+  &__placeholder-title {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    white-space: normal;
+  }
+
+  &__sub-title {
+    @include responsive(font-size, 0.9em 1em 1.1em);
+    font-weight: 500;
+    line-height: 1.5;
   }
 
   &__chevron {
@@ -42,23 +59,17 @@
     transition: transform 0.2s;
   }
 
-  &__body {
+  &__line {
     @extend .small-spacing;
-    @include responsive(padding-top, 1em 1.5em 2.2em);
     border-top: 2px solid darken(color(gray), 10);
   }
 
   &--expanded {
     cursor: inherit;
+  }
 
-    .card-collapsable__title {
-      white-space: normal;
-    }
-
-    .card-collapsable__chevron {
-      transform: scaleY(-1);
-    }
-
+  &--expanded &__chevron {
+    transform: scaleY(-1);
   }
 
 }

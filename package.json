@@ -4,6 +4,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --mode development",
     "build": "webpack --mode production",
+    "postinstall": "cp .env.example .env",
     "test": "exit 0"
   },
   "dependencies": {

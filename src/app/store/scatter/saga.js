@@ -1,5 +1,5 @@
 import { takeLatest, all, put, select } from 'redux-saga/effects';
-import networkConfig from 'network';
+import { networkConfig } from 'helpers';
 import Eos from 'eosjs';
 
 import { LOAD_SCATTER, GET_IDENTITY } from './constants';

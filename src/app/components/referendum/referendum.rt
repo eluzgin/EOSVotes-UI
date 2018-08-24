@@ -6,12 +6,14 @@
     </header>
 
     <div class="referendum__body small-spacing">
-        { this.props.copy }
+        <p>{ this.props.copy }</p>
+        <p><a class="referendum__url" href="{this.props.pull_request_url}" target="_blank">{this.props.pull_request_url}</a></p>
     </div>
 
-    <footer class="referendum__footer small-spacing uc medium-flex-container align-justify align-middle">
+
+    <footer class="referendum__footer small-spacing uc flex-container align-justify align-middle text-center">
         <div>
-            <i class="icon icon-clock"></i>
+            <i class="icon icon-clock show-for-medium"></i>
             { this.props.time_left } days left
         </div>
         <div class="referendum__controls">

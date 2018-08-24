@@ -1,3 +1,12 @@
-<p class="section text-center">
-    Application error.
-</p>
+<rt-import name="*" as="Components" from="components" />
+
+<Components.Fragment>
+
+    <section class="error-section text-center">
+        <h1 class="title uc">Application error.</h1>
+        <p>Please come back later.</p>
+    </section>
+
+    <Components.Footer />
+
+<Components.Fragment>

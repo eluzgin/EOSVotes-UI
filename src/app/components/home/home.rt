@@ -1,10 +1,11 @@
+<rt-import name="*" as="Containers" from="containers" />
 <rt-import name="*" as="Components" from="components" />
 
 <Components.Fragment>
 
-    <Components.Header rt-props="this.props"/>
+    <Containers.Header />
 
-    <section class="section">
+    <section class="section home">
         <div class="container">
 
             <div class="home-welcome card">
@@ -31,21 +32,15 @@
                 </div>
             </div>
 
-            <hr class="hide-for-large" />
+            <div class="small-spacing show-for-medium">
+                <Containers.Search />
+            </div>
 
-            <Components.CardCollapsable rt-repeat="referendum in this.state.referendums" key={referendum.id} title={referendum.title}>
-                <Components.Referendum rt-props="referendum" />
-            </Components.CardCollapsable>
+            <div class="small-spacing show-for-medium">
+                <Containers.Filters />
+            </div>
 
-            <p class="medium-spacing text-center" rt-if="this.state.more && !this.state.fetching">
-                <span class="medium-button liquid-for-small" onClick="e => this.fetch()">
-                    <i class="invisible">...</i> Load more ...
-                </span>
-            </p>
-
-            <p class="text-center uc" rt-if="this.state.fetching">
-                <i class="invisible">...</i> Loading ...
-            </p>
+            <Containers.Referendums />
 
         </div>
     </section>

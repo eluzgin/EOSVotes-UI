@@ -1,0 +1,11 @@
+<div>
+
+    <form class="search" onSubmit="e => this.onSubmit(e)">
+        <input class="search__input hide-for-medium" type="edit" placeholder="search..." value="{this.state.value}" onChange="e => this.onChange(e)" />
+        <input class="search__input show-for-medium" type="edit" placeholder="Search by title, account name and/or date" value="{this.state.value}" onChange="e => this.onChange(e)" />
+        <button class="search__button icon icon-plane" />
+    </form>
+
+    <div class="error">{ this.state.error }</div>
+
+</div>

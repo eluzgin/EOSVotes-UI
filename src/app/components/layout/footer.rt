@@ -1,3 +1,6 @@
 <footer class="footer">
-    Copyleft { new Date().getFullYear() } - github - credits
+    Copyleft { new Date().getFullYear() }
+    <span class="show-for-medium">-</span>
+    <br class="hide-for-medium" />
+    github - credits
 </footer>

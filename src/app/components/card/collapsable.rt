@@ -3,10 +3,19 @@
     <div class="card-collapsable__title">
         { this.props.title }
         <i class="card-collapsable__chevron icon icon-chevron" onClick="e => this.toggle(e)" />
+        <div class="card-collapsable__placeholder-title">{ this.props.title }</div>
     </div>
 
-    <div class="card-collapsable__body" rt-if="this.state.expanded">
-        { this.props.children }
+    <p class="card-collapsable__sub-title" rt-if="this.state.longTitle && this.state.expanded">{ this.props.title }</p>
+
+    <div class="card-collapsable__line" rt-if="this.state.expanded" />
+
+    <div class="small-spacing" rt-if="this.state.expanded">
+
+        <div class="small-spacing">
+            { this.props.children }
+        </div>
+
     </div>
 
 </div>

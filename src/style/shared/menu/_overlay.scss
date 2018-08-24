@@ -1,0 +1,11 @@
+.menu-overlay {
+  @extend .menu-wrap;
+  background: black;
+  opacity: 0;
+  transition: opacity $menu_transition_duration/2;
+
+  &.visible {
+    opacity: 0.25;
+  }
+
+}
