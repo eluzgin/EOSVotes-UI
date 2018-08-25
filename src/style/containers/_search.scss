@@ -5,6 +5,7 @@
   &__input {
     @extend %reset;
     background: white;
+    border-radius: 0.15em;
     box-sizing: border-box;
     padding: 1.25em 4em 1em 1em;
     text-transform: uppercase;

@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export class Menu extends React.Component {
+export class Popup extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = { duration: 500 };
     this.onKeyDown = this.onKeyDown.bind(this);
+  }
+
+  componentDidMount() {
+    this.componentDidUpdate({});
   }
 
   componentDidUpdate(prev) {
@@ -55,7 +59,7 @@ export class Menu extends React.Component {
   }
 
   render() {
-    return require('./menu.rt').call(this);
+    return require('./popup.rt').call(this);
   }
 
 }

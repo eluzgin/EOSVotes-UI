@@ -1,5 +1,5 @@
-<rt-import name="*" as="Containers" from="containers" />
 <rt-import name="*" as="Components" from="components" />
+<rt-import name="*" as="Containers" from="containers" />
 
 <Components.Fragment>
 
@@ -40,11 +40,15 @@
                 <Containers.Filters />
             </div>
 
-            <Containers.Referendums />
+            <Containers.ReferendumList />
 
         </div>
     </section>
 
     <Components.Footer />
 
+    <Containers.ReferendumPopup />
+
+
 </Components.Fragment>
+

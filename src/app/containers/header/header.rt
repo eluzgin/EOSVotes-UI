@@ -42,22 +42,16 @@
 
     <div class="header-placeholder" />
 
-    <Components.Menu on="{this.state.navigation}" onClose="e => this.close('navigation')">
-        <div class="menu__title show-for-medium">Menu</div>
-        <ul class="menu__list">
-            <li><a href="#"> <i class="icon icon-info"></i> Start here</a></li>
-            <li><a href="#"> <i class="icon icon-proxy"></i> Proxy vote</a></li>
-            <li><a href="#"> <i class="icon icon-forum"></i> Forum</a></li>
-            <li><a href="#"> <i class="icon icon-referendum"></i> Referendums</a></li>
-            <li><a href="#"> <i class="icon icon-proposal"></i> Worker proposal</a></li>
-            <li class="hide-for-large"><a href="#"> <i class="icon icon-login"></i> with Scatter</a></li>
-        </ul>
-    </Components.Menu>
+    <Components.Popup on="{this.state.navigation}" onClose="e => this.close('navigation')">
+        <Components.Navigation />
+    </Components.Popup>
 
-    <Components.Menu on="{this.state.search}" onClose="e => this.close('search')">
-        <Containers.Search onSubmit="e => this.close('search')" />
-        <p class="menu__tooltip" rt-if="!this.props.filters">Search by title, account name and/or date</p>
-        <Containers.Filters onRemove="e => this.close('search')" />
-    </Components.Menu>
+    <Components.Popup on="{this.state.search}" onClose="e => this.close('search')">
+        <div class="menu">
+            <Containers.Search onSubmit="e => this.close('search')" />
+            <p class="menu__tooltip" rt-if="!this.props.filters">Search by title, account name and/or date</p>
+            <Containers.Filters onRemove="e => this.close('search')" />
+        </div>
+    </Components.Popup>
 
 </Components.Fragment>

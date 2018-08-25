@@ -1,0 +1,11 @@
+<div class="menu">
+    <div class="menu__title show-for-medium">Menu</div>
+    <ul class="menu__list">
+        <li><a href="#"> <i class="icon icon-info"></i> Start here</a></li>
+        <li><a href="#"> <i class="icon icon-proxy"></i> Proxy vote</a></li>
+        <li><a href="#"> <i class="icon icon-forum"></i> Forum</a></li>
+        <li><a href="#"> <i class="icon icon-referendum"></i> Referendums</a></li>
+        <li><a href="#"> <i class="icon icon-proposal"></i> Worker proposal</a></li>
+        <li class="hide-for-large"><a href="#"> <i class="icon icon-login"></i> with Scatter</a></li>
+    </ul>
+</div>

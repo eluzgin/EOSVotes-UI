@@ -1,0 +1,40 @@
+<div class="referendum" rt-stateless>
+
+    <header class="flex-container align-justify align-middle">
+        <div class="lead text-overflow"> <i class="icon icon-user" /> by { props.author }</div>
+        <span class="small-button show-for-medium" onClick="() => props.vote(props.id)">
+            <span rt-if="props.voted === undefined">+ </span>
+            <span rt-if="props.voted !== undefined">change </span>
+            vote
+        </span>
+    </header>
+
+    <div class="referendum__body small-spacing">
+        <p>{ props.copy }</p>
+        <p><a class="referendum__url" href="{props.pull_request_url}" target="_blank">{props.pull_request_url}</a></p>
+    </div>
+
+    <footer class="referendum__footer small-spacing uc flex-container align-justify align-middle text-center">
+        <div>
+            <i class="icon icon-clock show-for-medium"></i>
+            { props.time_left } days left
+        </div>
+        <div class="referendum__controls">
+            <span class="green">
+                <i class="icon icon-thumbs-up" />{ props.thumbs_up }%
+            </span>
+            <span class="red">
+                <i class="icon icon-thumbs-down" />{ props.thumbs_down }%
+            </span>
+        </div>
+    </footer>
+
+    <p class="hide-for-medium">
+        <span class="small-button liquid-for-small" onClick="() => props.vote(props.id)">
+            <span rt-if="props.voted === undefined">+ </span>
+            <span rt-if="props.voted !== undefined">change </span>
+            vote
+        </span>
+    </p>
+
+</div>

@@ -15,6 +15,10 @@ body {
   @include breakpoint(medium only) {
     font-size: round($font-size-base*0.9);
   }
+
+  &.has-modal {
+    overflow: hidden;
+  }
 }
 
 * + .spacing,

@@ -2,19 +2,13 @@
 
   @extend .card;
   background: color(gray);
+  border-radius: 0;
   color: darken(color(gray), 70);
   cursor: pointer;
   position: relative;
 
   * + & {
     @include responsive(margin-top, 2px 1em 1.5em);
-  }
-
-  @include breakpoint(small only) {
-    // bleed
-    border-radius: 0;
-    margin-left: -1em;
-    margin-right: -1em;
   }
 
   @include breakpoint(medium) {
@@ -62,6 +56,13 @@
   &__line {
     @extend .small-spacing;
     border-top: 2px solid darken(color(gray), 10);
+  }
+
+  &.bleed-for-small {
+    @include breakpoint(small only) {
+      margin-left: -1em;
+      margin-right: -1em;
+    }
   }
 
   &--expanded {

@@ -1,8 +1,0 @@
-<rt-import name="Fragment" from="react" />
-
-<div class="menu-wrap" rt-if="this.state.on">
-    <div class="menu-overlay" rt-class="{visible: this.state.visible}" onClick="{this.props.onClose}" />
-    <div class="menu" rt-class="{visible: this.state.entered, leaving: this.state.leaving}">
-        { this.props.children }
-    </div>
-</div>

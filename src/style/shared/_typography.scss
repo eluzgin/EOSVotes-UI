@@ -45,3 +45,9 @@
   color: color(red);
   font-family: AvenirNext, sans-serif;
 }
+
+.link {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparentize(black, 0.7);
+}

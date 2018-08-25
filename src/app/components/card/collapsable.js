@@ -5,7 +5,9 @@ export class CardCollapsable extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      expanded: props.alwaysOpen
+    };
     this.onResize = this.onResize.bind(this);
   }
 
@@ -22,9 +24,11 @@ export class CardCollapsable extends React.Component {
     const container =  ReactDOM.findDOMNode(this);
     const placeholder = container.querySelector('.card-collapsable__placeholder-title');
     const title = container.querySelector('.card-collapsable__title');
-    this.setState({
-      longTitle: placeholder.offsetHeight > title.offsetHeight
-    });
+    if (title && placeholder) {
+      this.setState({
+        longTitle: placeholder.offsetHeight > title.offsetHeight
+      });
+    }
   }
 
   expand(event) {

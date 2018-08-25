@@ -34,14 +34,13 @@
     position: relative;
 
     &:before {
-      border-bottom: 0.35em solid color(primary);
+      border-bottom: 8px solid color(primary);
+      bottom: -10px;
       content: '';
       display: block;
       left: 1em;
-      margin-top: 2px;
       position: absolute;
       right: 1em;
-      top: 100%;
     }
 
     @include breakpoint(medium down) {

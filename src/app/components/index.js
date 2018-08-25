@@ -1,8 +1,11 @@
 export * from './card/collapsable';
-export * from './layout/menu/menu';
-export * from './referendum/referendum';
-export { default as Error503 } from './error/503.rt';
-export { default as Footer } from './layout/footer.rt';
-export { default as Home } from './home/home.rt';
-export { default as ReferendumList } from './referendum/list.rt';
+export * from './error/503';
+export * from './home/home';
+export * from './layout/footer';
+export * from './layout/navigation';
+export * from './modal/modal';
+export * from './popup/popup';
+export * from './referendum/brief';
+export * from './referendum/list';
+export * from './referendum/popup';
 export { Fragment } from 'react';

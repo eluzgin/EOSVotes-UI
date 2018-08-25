@@ -1,0 +1,11 @@
+.popup-overlay {
+  @extend .popup-wrap;
+  background: black;
+  opacity: 0;
+  transition: opacity $popup_transition_duration/2;
+
+  &.visible {
+    opacity: 0.35;
+  }
+
+}

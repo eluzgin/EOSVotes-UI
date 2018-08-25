@@ -11,10 +11,11 @@
 @import 'shared/footer';
 @import 'shared/header';
 @import 'shared/menu/menu';
-@import 'shared/menu/overlay';
 @import 'shared/menu/search';
-@import 'shared/menu/wrap';
-@import 'shared/referendum';
+@import 'shared/modal';
+@import 'shared/popup/overlay';
+@import 'shared/popup/wrap';
+@import 'shared/referendum/referendum';
 @import 'shared/section';
 @import 'shared/typography';
 

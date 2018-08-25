@@ -13,3 +13,4 @@ $brand: (
   @return map-get($brand, $key) or $key;
 }
 
+$popup_transition_duration: 0.5s;

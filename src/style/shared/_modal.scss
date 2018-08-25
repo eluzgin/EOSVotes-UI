@@ -1,0 +1,33 @@
+.modal {
+
+  -webkit-overflow-scrolling: touch;
+  bottom: 1em;
+  left: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50em;
+  overflow-y: scroll;
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  transform: translateX(-100vw);
+  transition: transform $popup_transition_duration/2 cubic-bezier(0.175, 0.885, 0.32, 1.175);
+  z-index: 101;
+
+  @include breakpoint(medium) {
+    bottom: 10vh;
+    left: 2.5em;
+    right: 2.5em;
+    top: 10vh;
+  }
+
+
+  .visible > & {
+    transform: translateX(0);
+  }
+
+  .leaving > & {
+    transform: translateX(-100vw);
+  }
+
+}

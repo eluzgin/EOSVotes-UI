@@ -32,14 +32,23 @@ const byQuery = (state = {}, action) => {
 
 const byId = (state = {}, action) => {
 
-  if (action.type == 'REFERENDUMS_RECEIVED') {
-    const newState = {};
-    action.res.referendums.forEach(referendum => newState[referendum.id] = referendum);
-    return Object.assign(newState, state);
+  switch (action.type) {
+
+    case 'REFERENDUMS_RECEIVED':
+      const newState = {};
+      action.res.referendums.forEach(referendum => newState[referendum.id] = referendum);
+      return Object.assign(newState, state);
+
+    case 'VOTE_SET':
+    case 'VOTE_UNVOTE':
+      return Object.assign({}, state, {
+        [action.id]: Object.assign({}, state[action.id], { voted: action.flag })
+      });
+
+    default:
+      return state;
   }
 
-  return state;
-
-}
+};
 
 export const referendums = combineReducers({ byQuery, byId });
