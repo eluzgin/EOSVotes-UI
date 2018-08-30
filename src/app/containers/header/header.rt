@@ -18,11 +18,22 @@
                 </div>
                 <!-- right -->
                 <span>
-                    <span class="button show-for-large small">
-                        Login with
+                    <a rt-if="!this.props.client" href="https://get-scatter.com/" target="new" class="button show-for-large small">
+                        Install
                         <span class="header__scatter">
                             <rt-include src="./scatter.svg" />
                         </span>
+                    </a>
+                    <span rt-if="this.props.client" onClick="()=>this.props.getIdentity()" class="button show-for-large small">
+                        <Components.Fragment rt-if="this.props.identity">
+                          Welcome {this.props.identity.name}
+                        </Components.Fragment>
+                        <Components.Fragment rt-if="!this.props.identity">
+                          Login With
+                          <span class="header__scatter">
+                              <rt-include src="./scatter.svg" />
+                          </span>
+                        </Components.Fragment>
                     </span>
                     <select class="header__language dropdown show-for-medium">
                         <option>eng</option>
@@ -43,7 +54,7 @@
     <div class="header-placeholder" />
 
     <Components.Popup on="{this.state.navigation}" onClose="e => this.close('navigation')">
-        <Components.Navigation />
+        <Components.Navigation rt-props="this.props"/>
     </Components.Popup>
 
     <Components.Popup on="{this.state.search}" onClose="e => this.close('search')">

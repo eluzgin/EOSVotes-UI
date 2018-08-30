@@ -75,6 +75,8 @@ module.exports = {
     modules: [
       path.resolve('./src/app'),
       path.resolve('./node_modules'),
+      path.resolve(__dirname, "node_modules"),  //dont bloody touch these - needed for scatter
+      'node_modules'                            //dont bloody touch these - needed for scatter
     ]
   },
 

@@ -10,6 +10,7 @@ class Filters extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return require('./filters.rt').call(this);
   }
 
