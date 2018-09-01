@@ -1,8 +1,8 @@
 <div class="referendum" rt-stateless>
 
     <header class="flex-container align-justify align-middle">
-        <div class="lead text-overflow"> <i class="icon icon-user" /> by { props.author }</div>
-        <span class="small-button show-for-medium" onClick="() => props.vote(props.id)">
+        <div class="lead text-overflow"> <i class="icon icon-user" /> by { props.proposer }</div>
+        <span class="small-button show-for-medium" onClick="() => props.vote(props.proposal_name)">
             <span rt-if="props.voted === undefined">+ </span>
             <span rt-if="props.voted !== undefined">change </span>
             vote
@@ -10,27 +10,29 @@
     </header>
 
     <div class="referendum__body small-spacing">
-        <p>{ props.copy }</p>
-        <p><a class="referendum__url" href="{props.pull_request_url}" target="_blank">{props.pull_request_url}</a></p>
+        <p>{ props.proposal_json.content }</p>
+        <p>
+          <a class="referendum__url" href="{props.pull_request_url}" target="_blank">No pull request</a>
+        </p>
     </div>
 
     <footer class="referendum__footer small-spacing uc flex-container align-justify align-middle text-center">
         <div>
             <i class="icon icon-clock show-for-medium"></i>
-            { props.time_left } days left
+            { props.time_left || 10 } days left
         </div>
         <div class="referendum__controls">
             <span class="green">
-                <i class="icon icon-thumbs-up" />{ props.thumbs_up }%
+                <i class="icon icon-thumbs-up" />{ props.votes.total !== 0 ? Number(((props.votes[1] ? props.votes[1] : 0) / props.votes.total)*100).toFixed(0) : 0 }%
             </span>
             <span class="red">
-                <i class="icon icon-thumbs-down" />{ props.thumbs_down }%
+                <i class="icon icon-thumbs-down" />{ props.votes.total !== 0 ? Number(((props.votes[0] ? props.votes[0] : 0) / props.votes.total)*100).toFixed(0) : 0 }%
             </span>
         </div>
     </footer>
 
     <p class="hide-for-medium">
-        <span class="small-button liquid-for-small" onClick="() => props.vote(props.id)">
+        <span class="small-button liquid-for-small" onClick="() => props.vote(props.proposal_name)">
             <span rt-if="props.voted === undefined">+ </span>
             <span rt-if="props.voted !== undefined">change </span>
             vote

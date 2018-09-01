@@ -17,12 +17,20 @@ const byQuery = (state = {}, action) => {
 
   if (action.type == 'REFERENDUMS_RECEIVED') {
     const { filters, page, res } = action;
+    let proposals = [];
+
+    Object.keys(res).map(proposer => {
+      Object.keys(res[proposer]).map(propname => {
+        proposals.push(res[proposer][propname]);
+      });
+    });
+
     const key = stringify({ filters, page });
     return Object.assign({}, state, {
       [key]: {
         fetching: false,
         more: res.more,
-        items: state[key].items.concat(res.referendums.map(ref => ref.id))
+        items: state[key].items.concat(proposals.map((ref,id) => id))
       }
     });
   }
@@ -35,8 +43,17 @@ const byId = (state = {}, action) => {
   switch (action.type) {
 
     case 'REFERENDUMS_RECEIVED':
+      const {res} = action;
       const newState = {};
-      action.res.referendums.forEach(referendum => newState[referendum.id] = referendum);
+      let proposals = [];
+
+      Object.keys(res).map(proposer => {
+        Object.keys(res[proposer]).map(propname => {
+          proposals.push(res[proposer][propname]);
+        });
+      });
+
+      proposals.map((ref,id) => newState[id] = ref);
       return Object.assign(newState, state);
 
     case 'VOTE_SET':
