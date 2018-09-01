@@ -4,7 +4,7 @@
 <Components.Fragment>
 
     <div class="small-spacing" rt-if="this.props.referendums">
-        <Components.CardCollapsable rt-repeat="referendum in this.props.referendums.items" key={referendum.id} title={referendum.title} class="bleed-for-small">
+        <Components.CardCollapsable rt-repeat="referendum in this.props.referendums.items" key={referendum.proposal_name} title={referendum.title} class="bleed-for-small">
             <Containers.ReferendumBrief rt-props="referendum" />
         </Components.CardCollapsable>
     </div>
