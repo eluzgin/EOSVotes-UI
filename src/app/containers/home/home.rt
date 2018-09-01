@@ -3,7 +3,7 @@
 
 <Components.Fragment>
 
-    <Containers.Header />
+    <Containers.Header rt-props="this.props" />
 
     <section class="section home">
         <div class="container">
@@ -51,4 +51,3 @@
 
 
 </Components.Fragment>
-

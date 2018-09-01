@@ -1,7 +1,8 @@
 import React from 'react';
-import { Home, Error503 } from 'components';
+import { Error503 } from 'components';
+import { Home } from 'containers';
 import { Provider } from 'react-redux';
-import { store } from 'store';
+
 
 export default class App extends React.Component {
 
@@ -14,11 +15,8 @@ export default class App extends React.Component {
       return <Error503 />;
     }
     return (
-      <Provider store={store}>
-        <Home />
-      </Provider>
+      <Home />
     );
   }
 
 }
-

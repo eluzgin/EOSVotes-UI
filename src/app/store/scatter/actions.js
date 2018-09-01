@@ -1,7 +1,6 @@
 import { LOAD_SCATTER, LOAD_CLIENT, GET_IDENTITY, SET_IDENTITY } from './constants';
 
 export function loadScatter(scatter) {
-  console.log(scatter);
   return {
     type: LOAD_SCATTER,
     scatter,

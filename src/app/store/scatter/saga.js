@@ -4,7 +4,7 @@ import Eos from 'eosjs';
 
 import { LOAD_SCATTER, GET_IDENTITY } from './constants';
 import { loadClient, setIdentity } from './actions';
-import { selectScatter, selectIdentity } from './selectors';
+import state, { selectScatter, selectIdentity } from './selectors';
 
 export function* requestIdentity() {
   try {
