@@ -21,35 +21,24 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return require('./home.rt').call(this);
   }
 
 }
 
-// const mapStateToProps = createStructuredSelector({
-//   client: selectClient(),
-//   identity: selectIdentity(),
-// });
-//
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     loadScatter: (scatter) => dispatch(loadScatter(scatter)),
-//     getIdentity: () => dispatch(getIdentity()),
-//   };
-// }
+const mapStateToProps = createStructuredSelector({
+  client: selectClient(),
+  identity: selectIdentity(),
+});
+
+function mapDispatchToProps(dispatch) {
+  return {
+    loadScatter: (scatter) => dispatch(loadScatter(scatter)),
+    getIdentity: () => dispatch(getIdentity()),
+  };
+}
 
 export default connect(
-  // mapStateToProps,
-  // mapDispatchToProps
-
-  state => ({
-    client: state.scatter.client,
-    identity: state.scatter.identity,
-  }),
-
-  {
-    loadScatter: (scatter) => loadScatter(scatter),
-    getIdentity: () => getIdentity(),
-  }
+  mapStateToProps,
+  mapDispatchToProps
 )(Home);

@@ -1,3 +1,11 @@
 import React from 'react';
+export class Navigation extends React.Component {
 
-export const Navigation = require('./navigation.rt');
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return require('./navigation.rt').call(this);
+  }
+}

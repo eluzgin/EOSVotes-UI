@@ -8,14 +8,13 @@ const initialState = {
 };
 
 function ScatterReducer(state = initialState, action) {
-  console.log(action);
   switch (action.type) {
     case LOAD_SCATTER:
-      return Object.assign(state,{scatter: action.scatter});
+      return Object.assign({},state,{scatter: action.scatter});
     case LOAD_CLIENT:
-      return Object.assign(state,{client: action.client});
+      return Object.assign({},state,{client: action.client});
     case SET_IDENTITY:
-      return Object.assign(state,{identity: action.identity});
+      return Object.assign({},state,{identity: action.identity});
     default:
       return state;
   }
