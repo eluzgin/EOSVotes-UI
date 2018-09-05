@@ -7,16 +7,18 @@
                 <div class="flex-container align-justify align-middle">
                     <div class="lead uc">
                         <i class="icon icon-box-vote" />
-                        <b>1,101,1337</b>
+                        <b>{props.on ? props.on.votes.total : 0}</b>
                         <span class="regular"> votes</span>
+
                     </div>
 
                     <div class="show-for-large">
+                      <div rt-if="props.identity !== null">
                         <div class="referendum__controls uc" rt-if="props.voted === undefined">
-                            <span class="green" onClick="{() => props.vote(props.id, true)}">
+                            <span class="green" onClick="{() => props.vote(props.on, true)}">
                                 <i class="icon icon-thumbs-up hoverable" /> yes
                             </span>
-                            <span class="red" onClick="{() => props.vote(props.id, false)}">
+                            <span class="red" onClick="{() => props.vote(props.on, false)}">
                                 <i class="icon icon-thumbs-down hoverable" /> no
                             </span>
                         </div>
@@ -24,34 +26,47 @@
                             You voted
                             <b class="green" rt-if="props.voted">yes</b>
                             <b class="red" rt-if="!props.voted">no</b>.
-                            <span onClick="{() => props.unvote(props.id)}" class="link">Change</span>.
+                            <span onClick="{() => props.unvote(props.on)}" class="link">Change</span>.
                         </div>
+                      </div>
+                      <div rt-if="props.identity === null">
+                        Login to Vote
+                      </div>
                     </div>
-
-
                 </div>
 
                 <p class="small-spacing">By executing this action you are agreeing to the EOS constitution and this action's associated ricardian contract. The ricardian contract may be viewed in the Scatter approval prompt.</p>
 
-                <div class="small-spacing text-center referendum__controls uc hide-for-large" rt-if="props.voted === undefined">
-                    <span class="green" onClick="{() => props.vote(props.id, true)}">
-                        <i class="icon icon-thumbs-up hoverable" /> yes
-                    </span>
-                    <span class="red" onClick="{() => props.vote(props.id, false)}">
-                        <i class="icon icon-thumbs-down hoverable" /> no
-                    </span>
-                </div>
+                <div rt-if="props.identity !== null">
+                  <div class="small-spacing text-center referendum__controls uc hide-for-large" rt-if="props.voted === undefined">
+                      <span class="green" onClick="{() => props.vote(props.on, true)}">
+                          <i class="icon icon-thumbs-up hoverable" /> yes
+                      </span>
+                      <span class="red" onClick="{() => props.vote(props.on, false)}">
+                          <i class="icon icon-thumbs-down hoverable" /> no
+                      </span>
+                  </div>
 
-                <div class="small-spacing text-center hide-for-large" rt-if="props.voted !== undefined">
-                    You voted
-                    <b class="green" rt-if="props.voted">yes</b>
-                    <b class="red" rt-if="!props.voted">no</b>.
-                    <span onClick="{() => props.unvote(props.id)}" class="link">Change</span>.
+                  <div class="small-spacing text-center hide-for-large" rt-if="props.voted !== undefined">
+                      You voted
+                      <b class="green" rt-if="props.voted">yes</b>
+                      <b class="red" rt-if="!props.voted">no</b>.
+                      <span onClick="{() => props.unvote(props.on)}" class="link">Change</span>.
+                  </div>
+                </div>
+                <div rt-if="props.identity === null">
+                  <div class="small-spacing text-center hide-for-large">
+                    Login to Vote
+                  </div>
                 </div>
 
                 <p class="referendum__stake">
                     <span class="referendum__sub-title">AVAILABLE STAKE</span><br />
-                    <b>56,224</b> EOS
+                    <b>
+                    {
+                      props.account ? (Number(props.account.total_resources.cpu_weight.split(' ')[0]) + Number(props.account.total_resources.net_weight.split(' ')[0])).toFixed(4) : Number(0).toFixed(4)
+                    }
+                    </b> EOS
                 </p>
 
             </div>

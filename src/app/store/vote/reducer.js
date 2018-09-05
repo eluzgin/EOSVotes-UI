@@ -4,11 +4,10 @@ export const vote = (state = false, action) => {
 
     case 'VOTE_SHOW':
       return action.id;
-
     case 'VOTE_HIDE':
-    case 'VOTE_SET':
       return false;
-
+    case 'VOTE_SET':
+      return action.id;
     default:
       return state;
 

@@ -32,6 +32,7 @@
                 </div>
             </div>
 
+            <!-- Implement this later
             <div class="small-spacing show-for-medium">
                 <Containers.Search />
             </div>
@@ -39,15 +40,17 @@
             <div class="small-spacing show-for-medium">
                 <Containers.Filters />
             </div>
+            -->
 
             <Containers.ReferendumList />
+
 
         </div>
     </section>
 
     <Components.Footer />
 
-    <Containers.ReferendumPopup />
+    <Containers.ReferendumPopup   rt-props="this.props"/>
 
 
 </Components.Fragment>

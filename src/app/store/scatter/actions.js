@@ -1,4 +1,4 @@
-import { LOAD_SCATTER, LOAD_CLIENT, GET_IDENTITY, SET_IDENTITY } from './constants';
+import { LOAD_SCATTER, LOAD_CLIENT, GET_IDENTITY, SET_IDENTITY, SET_ACCOUNT } from './constants';
 
 export function loadScatter(scatter) {
   return {
@@ -24,5 +24,12 @@ export function setIdentity(identity) {
   return {
     type: SET_IDENTITY,
     identity,
+  };
+}
+
+export function setAccount(account) {
+  return {
+    type: SET_ACCOUNT,
+    account,
   };
 }
