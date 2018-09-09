@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import ScatterJS from 'scatter-js/dist/scatter.esm';
 import { loadScatter, getIdentity } from 'store/scatter/actions';
-import { selectClient, selectIdentity, selectAccount } from 'store/scatter/selectors';
+import { selectClient, selectIdentity, selectAccount,selectStatus } from 'store/scatter/selectors';
 
 class Home extends React.Component {
 
@@ -29,6 +29,7 @@ const mapStateToProps = createStructuredSelector({
   client: selectClient(),
   identity: selectIdentity(),
   account: selectAccount(),
+  status: selectStatus(),
 });
 
 function mapDispatchToProps(dispatch) {

@@ -3,11 +3,13 @@ import { networkConfig } from 'helpers';
 import Eos from 'eosjs';
 
 import { LOAD_SCATTER, GET_IDENTITY } from './constants';
-import { loadClient, setIdentity, setAccount } from './actions';
+import { loadClient, setIdentity, setAccount, setStatus } from './actions';
 import state, { selectScatter, selectIdentity, selectClient } from './selectors';
 
+const delay = (ms) => new Promise(res => setTimeout(res, ms))
 
 export function* voteProposal(action) {
+  yield put(setStatus("Scatter will appear to confirm Vote"));
   try {
     console.log(action);
     const identity = yield select(selectIdentity());
@@ -30,10 +32,14 @@ export function* voteProposal(action) {
       ]
     }
     const res = yield client.transaction(tx);
+    yield put(setStatus("Voted successfully."));
     console.log(res);
   } catch (err) {
     console.error(err);
+    yield put(setStatus("Transaction failed."));
   }
+  yield delay(3000);
+  yield put(setStatus(null));
 }
 
 export function* requestIdentity() {

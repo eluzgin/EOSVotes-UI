@@ -1,11 +1,12 @@
 //import { fromJS } from 'immutable';
-import { LOAD_SCATTER, LOAD_CLIENT, SET_IDENTITY, SET_ACCOUNT } from './constants';
+import { LOAD_SCATTER, LOAD_CLIENT, SET_IDENTITY, SET_ACCOUNT, SET_STATUS } from './constants';
 
 const initialState = {
   scatter: null,
   client: null,
   identity: null,
   account: null,
+  status: null,
 };
 
 function ScatterReducer(state = initialState, action) {
@@ -18,6 +19,8 @@ function ScatterReducer(state = initialState, action) {
       return Object.assign({},state,{identity: action.identity});
     case SET_ACCOUNT:
       return Object.assign({},state,{account: action.account});
+    case SET_STATUS:
+      return Object.assign({},state,{status: action.status});  
     default:
       return state;
   }

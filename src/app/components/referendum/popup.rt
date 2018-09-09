@@ -13,7 +13,10 @@
                     </div>
 
                     <div class="show-for-large">
+
+
                       <div rt-if="props.identity !== null">
+
                         <div class="referendum__controls uc" rt-if="props.voted === undefined">
                             <span class="green" onClick="{() => props.vote(props.on, true)}">
                                 <i class="icon icon-thumbs-up hoverable" /> yes
@@ -28,6 +31,7 @@
                             <b class="red" rt-if="!props.voted">no</b>.
                             <span onClick="{() => props.unvote(props.on)}" class="link">Change</span>.
                         </div>
+                        <div rt-if="props.status">{props.status}</div>
                       </div>
                       <div rt-if="props.identity === null">
                         Login to Vote

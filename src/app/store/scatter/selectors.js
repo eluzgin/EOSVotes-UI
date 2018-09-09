@@ -13,6 +13,7 @@ const selectScatter = () => createSelector(selectState, substate => substate.sca
 const selectClient = () => createSelector(selectState, substate => substate.client);
 const selectIdentity = () => createSelector(selectState, substate => substate.identity);
 const selectAccount = () => createSelector(selectState, substate => substate.account);
+const selectStatus = () => createSelector(selectState, substate => substate.status);
 
 export default selectState;
-export { selectState, selectScatter, selectClient, selectIdentity, selectAccount };
+export { selectState, selectScatter, selectClient, selectIdentity, selectAccount,selectStatus };

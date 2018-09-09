@@ -1,3 +1,5 @@
+<rt-import name="Markup" from="components/referendum/markup" />
+
 <div class="referendum" rt-stateless>
 
     <header class="flex-container align-justify align-middle">
@@ -10,7 +12,7 @@
     </header>
 
     <div class="referendum__body small-spacing">
-        <p>{ props.proposal_json.content }</p>
+        <Markup content="{props.proposal_json.content}" />
         <p rt-if="props.pull_request_url">
           <a class="referendum__url" href="{props.pull_request_url}" target="_blank">No pull request</a>
         </p>
