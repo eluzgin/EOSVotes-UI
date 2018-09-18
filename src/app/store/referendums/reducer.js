@@ -19,10 +19,8 @@ const byQuery = (state = {}, action) => {
     const { filters, page, res } = action;
     let proposals = [];
 
-    Object.keys(res).map(proposer => {
-      Object.keys(res[proposer]).map(propname => {
-        proposals.push(res[proposer][propname]);
-      });
+    Object.keys(res).map(proposal_name => {
+      proposals.push(res[proposal_name]);
     });
 
     const key = stringify({ filters, page });
@@ -47,10 +45,8 @@ const byId = (state = {}, action) => {
       const newState = {};
       let proposals = [];
 
-      Object.keys(res).map(proposer => {
-        Object.keys(res[proposer]).map(propname => {
-          proposals.push(res[proposer][propname]);
-        });
+      Object.keys(res).map(proposal_name => {
+        proposals.push(res[proposal_name]);
       });
 
       proposals.map((ref,id) => newState[id] = ref);
