@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { stringify } from 'helpers';
 
 
-const handleProposals = (res) => {
+function handleProposals(res) {
   const proposals = [];
   Object.keys(res).map(proposal_name => {
     const tally = res[proposal_name];
@@ -43,29 +43,7 @@ const byQuery = (state = {}, action) => {
 
   if (action.type == 'REFERENDUMS_RECEIVED') {
     const { filters, page, res } = action;
-    const proposals = [];
-
-    Object.keys(res).map(proposal_name => {
-      const tally = res[proposal_name];
-      const proposal = Object.assign(tally.proposal, tally.stats);
-      console.log(proposal);
-      if (typeof proposal.proposal_json === "string") proposal.proposal_json = JSON.parse(proposal.proposal_json);
-  
-      // Only show proposals not yet expired (72 hours buffer)
-      const expires_at = new Date(proposal.expires_at).getTime();
-      const now = Date.now();
-      if ((expires_at - now) < (60 * 60 * 72)) {
-        console.log(proposal.proposal_name, "was hidden due to being expired", proposal.expires_at)
-        return;
-      }
-  
-      // Do not show proposals with ZERO votes
-      if (proposal.votes.total === 0) {
-        console.log(proposal.proposal_name, "was hidden due to 0 votes")
-        return;
-      }
-      proposals.push(proposal);
-    });
+    const proposals = handleProposals(res);
 
     const key = stringify({ filters, page });
     return Object.assign({}, state, {
@@ -87,28 +65,7 @@ const byId = (state = {}, action) => {
     case 'REFERENDUMS_RECEIVED':
       const {res} = action;
       const newState = {};
-      const proposals = [];
-
-      Object.keys(res).map(proposal_name => {
-        const tally = res[proposal_name];
-        const proposal = Object.assign(tally.proposal, tally.stats);
-        if (typeof proposal.proposal_json === "string") proposal.proposal_json = JSON.parse(proposal.proposal_json);
-    
-        // Only show proposals not yet expired (72 hours buffer)
-        const expires_at = new Date(proposal.expires_at).getTime();
-        const now = Date.now();
-        if ((expires_at - now) < (60 * 60 * 72)) {
-          console.log(proposal.proposal_name, "was hidden due to being expired", proposal.expires_at)
-          return;
-        }
-    
-        // Do not show proposals with ZERO votes
-        if (proposal.votes.total === 0) {
-          console.log(proposal.proposal_name, "was hidden due to 0 votes")
-          return;
-        }
-        proposals.push(proposal);
-      });
+      const proposals = handleProposals(res);
 
       proposals.map((ref,id) => newState[id] = ref);
       return Object.assign(newState, state);
