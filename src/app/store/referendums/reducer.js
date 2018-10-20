@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { stringify } from 'helpers';
 
 
-function handleProposals(res) {
+const handleProposals = (res) => {
   const proposals = [];
   Object.keys(res).map(proposal_name => {
     const tally = res[proposal_name];
