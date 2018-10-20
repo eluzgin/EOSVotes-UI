@@ -14,8 +14,8 @@ module.exports = {
     './src/index-html/index.html',
 
     // remove later
-    './dummy/referendums-0.json',
-    './dummy/referendums-1.json',
+    // './dummy/referendums-0.json',
+    // './dummy/referendums-1.json',
   ],
 
   output: {
