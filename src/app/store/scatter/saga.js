@@ -17,15 +17,13 @@ export function* voteProposal(action) {
     const tx = {
       actions: [
         {
-          account:'eosforumdapp',
-          name:'vote',
+          account: 'eosforumrcpp',
+          name: 'vote',
           data: {
-            voter:identity.name,
-            proposer:action.id.proposer,
-            proposal_name:action.id.proposal_name,
-            vote:action.flag ? 1 : 0,
-            proposal_hash:'',
-            vote_json:'',
+            voter: identity.name,
+            proposal_name: action.id.proposal_name,
+            vote: action.flag ? 1 : 0,
+            vote_json: '',
           },
           authorization: [{ actor:identity.name, permission:identity.authority }],
         }
