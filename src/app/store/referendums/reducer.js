@@ -18,10 +18,10 @@ function handleProposals(res) {
     }
 
     // Do not show proposals with ZERO votes
-    if (proposal.votes.total === 0) {
-      console.log(proposal.proposal_name, "was hidden due to 0 votes")
-      return;
-    }
+    // if (proposal.votes.total === 0) {
+    //   console.log(proposal.proposal_name, "was hidden due to 0 votes")
+    //   return;
+    // }
     proposals.push(proposal);
   });
   return proposals;
