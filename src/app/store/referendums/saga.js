@@ -3,7 +3,7 @@ import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
 
 function* fetch({filters, page}) {
   try {
-    let res = yield call(api.get, `tallies`); //pass filters to api here too
+    let res = yield call(api.get, `latest.json`); //pass filters to api here too
     res = yield call(() => res.json());
     yield put({
       type: 'REFERENDUMS_RECEIVED',

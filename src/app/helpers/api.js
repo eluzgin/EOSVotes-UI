@@ -1,7 +1,7 @@
 class API {
 
   get(uri) {
-    return window.fetch('https://api.eosvotes.io/' + uri); //TODO: restore process.env.API_LOCATION
+    return window.fetch('https://s3.amazonaws.com/api.eosvotes.io/eosvotes/tallies/' + uri); //TODO: restore process.env.API_LOCATION
   }
 
 }
