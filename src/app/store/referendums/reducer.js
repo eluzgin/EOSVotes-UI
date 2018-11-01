@@ -13,12 +13,10 @@ function handleProposals(res) {
     const expires_at = new Date(proposal.expires_at).getTime();
     const now = Date.now();
 
-    // TO-DO: Snapshot does not report Dates correctly
-
-    // if ((expires_at - now) < (60 * 60 * 72)) {
-    //   console.log(proposal.proposal_name, "was hidden due to being expired", proposal.expires_at)
-    //   return;
-    // }
+    if ((expires_at - now) < (60 * 60 * 72)) {
+      console.log(proposal.proposal_name, "was hidden due to being expired", proposal.expires_at)
+      return;
+    }
 
     // Do not show proposals with ZERO votes
     // if (proposal.votes.total === 0) {
