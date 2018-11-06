@@ -14,6 +14,7 @@
                         <span class="header__logo">
                             <rt-include src="./logo.svg" />
                         </span>
+                        <b>Beta</b>
                     </span>
                 </div>
                 <!-- right -->
@@ -37,7 +38,6 @@
                     </span>
                     <select class="header__language dropdown show-for-medium">
                         <option>eng</option>
-                        <option>rus</option>
                     </select>
                     <span onClick="e => this.open('search')" class="hide-for-medium hoverable">
                         <i class="header__icon icon icon-search" rt-if="!this.props.filters" />
