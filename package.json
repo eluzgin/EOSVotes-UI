@@ -20,7 +20,7 @@
     "redux-immutable": "^4.0.0",
     "redux-saga": "^0.16.0",
     "reselect": "^3.0.1",
-    "scatter-js": "^2.4.0",
+    "scatter-js": "^2.5.2",
     "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
