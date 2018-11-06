@@ -22,14 +22,14 @@
                         </span>
                     </div>
                 </div>
-                <div class="card-spacing">
+                 <!-- Implement this later<div class="card-spacing">
                     <p class="home-welcome__button-container">
                         <a class="home-welcome__button">proxy vote</a>
                         <a class="home-welcome__button">forum</a>
                         <a class="home-welcome__button">referendum</a>
                         <a class="home-welcome__button">worker proposals</a>
                     </p>
-                </div>
+                </div> -->
             </div>
 
             <!-- Implement this later
