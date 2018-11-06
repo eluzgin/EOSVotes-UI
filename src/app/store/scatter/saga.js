@@ -14,20 +14,39 @@ export function* voteProposal(action) {
     console.log(action);
     const identity = yield select(selectIdentity());
     const client = yield select(selectClient());
-    const tx = {
-      actions: [
-        {
-          account: 'eosforumrcpp',
-          name: 'vote',
-          data: {
-            voter: identity.name,
-            proposal_name: action.id.proposal_name,
-            vote: action.flag ? 1 : 0,
-            vote_json: '',
-          },
-          authorization: [{ actor:identity.name, permission:identity.authority }],
-        }
-      ]
+    let tx;
+    if (action.flag === -1) {
+      console.log("unvote", action.flag);
+      tx = {
+        actions: [
+          {
+            account: 'eosforumrcpp',
+            name: 'unvote',
+            data: {
+              voter: identity.name,
+              proposal_name: action.id.proposal_name,
+            },
+            authorization: [{ actor:identity.name, permission:identity.authority }],
+          }
+        ]
+      }
+    } else {
+      console.log("vote", action.flag);
+      tx = {
+        actions: [
+          {
+            account: 'eosforumrcpp',
+            name: 'vote',
+            data: {
+              voter: identity.name,
+              proposal_name: action.id.proposal_name,
+              vote: action.flag ? 1 : 0,
+              vote_json: '',
+            },
+            authorization: [{ actor:identity.name, permission:identity.authority }],
+          }
+        ]
+      }
     }
     const res = yield client.transaction(tx);
     yield put(setStatus("Voted successfully."));

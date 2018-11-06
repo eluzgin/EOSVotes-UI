@@ -18,11 +18,14 @@
                       <div rt-if="props.identity !== null">
 
                         <div class="referendum__controls uc" rt-if="props.voted === undefined">
-                            <span class="green" onClick="{() => props.vote(props.on, true)}">
+                            <span class="green" onClick="{() => props.vote(props.on, 0)}">
                                 <i class="icon icon-thumbs-up hoverable" /> yes
                             </span>
-                            <span class="red" onClick="{() => props.vote(props.on, false)}">
+                            <span class="red" onClick="{() => props.vote(props.on, 1)}">
                                 <i class="icon icon-thumbs-down hoverable" /> no
+                            </span>
+                            <span class="grey" onClick="{() => props.vote(props.on, -1)}">
+                                <i class="icon icon-thumbs-down hoverable" /> unvote
                             </span>
                         </div>
                         <div rt-if="props.voted !== undefined">
