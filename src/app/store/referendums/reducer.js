@@ -12,8 +12,9 @@ function handleProposals(res) {
     // Only show proposals not yet expired (72 hours buffer)
     const expires_at = new Date(proposal.expires_at).getTime();
     const now = Date.now();
+    const hours72 = 1000 * 60 * 60 * 72;
 
-    if ((expires_at - now) < (60 * 60 * 72)) {
+    if (expires_at + hours72 < now) {
       console.log(proposal.proposal_name, "was hidden due to being expired", proposal.expires_at)
       return;
     }
