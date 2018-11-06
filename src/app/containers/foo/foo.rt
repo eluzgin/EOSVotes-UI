@@ -1,0 +1,17 @@
+<rt-import name="*" as="Components" from="components" />
+<rt-import name="*" as="Containers" from="containers" />
+
+<Components.Fragment>
+
+    <Containers.Header rt-props="this.props" />
+
+    <div>
+        Foo Bar
+    </div>
+
+    <Components.Footer />
+
+    <Containers.ReferendumPopup   rt-props="this.props"/>
+
+
+</Components.Fragment>
