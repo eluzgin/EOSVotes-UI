@@ -3,7 +3,7 @@ import { networkConfig } from 'helpers';
 import Eos from 'eosjs';
 
 import { LOAD_SCATTER, GET_IDENTITY } from './constants';
-import { loadClient, setIdentity, setAccount, setStatus } from './actions';
+import { loadClient, setIdentity, setAccount, setStatus, setTransactionId } from './actions';
 import state, { selectScatter, selectIdentity, selectClient } from './selectors';
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms))
@@ -50,9 +50,10 @@ export function* voteProposal(action) {
     }
     const res = yield client.transaction(tx);
     yield put(setStatus("Voted successfully."));
-    console.log(res);
+    yield put(setTransactionId(res.processed.id));
+    console.log("voted", res);
   } catch (err) {
-    console.error(err);
+    console.error("voted", err);
     yield put(setStatus("Transaction failed."));
   }
   yield delay(3000);
