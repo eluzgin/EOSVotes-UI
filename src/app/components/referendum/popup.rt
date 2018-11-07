@@ -30,8 +30,9 @@
                         </div>
                         <div rt-if="props.voted !== undefined">
                             You voted
-                            <b class="green" rt-if="props.voted">yes</b>
-                            <b class="red" rt-if="!props.voted">no</b>.
+                            <b class="grey" rt-if="props.voted === -1">unvote</b>
+                            <b class="green" rt-if="props.voted === 1">yes</b>
+                            <b class="red" rt-if="props.voted === 0">no</b>.
                             <span onClick="{() => props.unvote(props.on)}" class="link">Change</span>.
                         </div>
                         <div rt-if="props.status">{props.status}</div>
@@ -56,8 +57,9 @@
 
                   <div class="small-spacing text-center hide-for-large" rt-if="props.voted !== undefined">
                       You voted
-                      <b class="green" rt-if="props.voted">yes</b>
-                      <b class="red" rt-if="!props.voted">no</b>.
+                      <b class="grey" rt-if="props.voted === -1">unvote</b>
+                      <b class="green" rt-if="props.voted === 1">yes</b>
+                      <b class="red" rt-if="props.voted === 0">no</b>.
                       <span onClick="{() => props.unvote(props.on)}" class="link">Change</span>.
                   </div>
                 </div>
