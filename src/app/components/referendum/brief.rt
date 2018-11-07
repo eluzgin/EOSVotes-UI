@@ -27,12 +27,12 @@
             {props.votes.total || 0} votes / {Math.round((props.staked.total || 0) / 10000)} EOS
         </div>
         <div class="referendum__controls">
-            <span class="green" style="min-width:100px;">
+            <span class="green">
                 <i class="icon icon-thumbs-up" style="display:inline;" />{ props.staked.total !== 0 ? Number(((props.staked[1] ? props.staked[1] : 0) / props.staked.total)*100).toFixed(0) : 0 }%
             </span>
-            <div class="red" style="min-width:100px;">
+            <span class="red">
                 <i class="icon icon-thumbs-down" style="display:inline;" />{ props.staked.total !== 0 ? Number(((props.staked[0] ? props.staked[0] : 0) / props.staked.total)*100).toFixed(0) : 0 }%
-            </div>
+            </span>
         </div>
     </footer>
 
