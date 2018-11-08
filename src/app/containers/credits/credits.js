@@ -5,7 +5,7 @@ import ScatterJS from 'scatter-js/dist/scatter.esm';
 import { loadScatter, getIdentity } from 'store/scatter/actions';
 import { selectClient, selectIdentity, selectAccount,selectStatus } from 'store/scatter/selectors';
 
-class Foo extends React.Component {
+class About extends React.Component {
 
   constructor(props) {
     super(props);
@@ -21,7 +21,7 @@ class Foo extends React.Component {
   }
 
   render() {
-    return require('./foo.rt').call(this);
+    return require('./credits.rt').call(this);
   }
 }
 
@@ -42,4 +42,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Foo);
+)(About);

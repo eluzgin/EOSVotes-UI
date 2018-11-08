@@ -4,7 +4,9 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import configureStore from 'store/configureStore'
 import App from './app';
-import Foo from './containers/foo/foo';
+import About from './containers/about/about';
+import Credits from './containers/credits/credits';
+import Proxy from './containers/proxy/proxy';
 
 const store = configureStore();
 
@@ -14,7 +16,9 @@ function render(){
       <Router>
         <div>
           <Route exact path="/" component={App} />
-          <Route path="/foo" component={Foo} />
+          <Route path="/about" component={About} />
+          <Route path="/credits" component={Credits} />
+          <Route path="/proxy" component={Proxy} />
         </div>
       </Router>
     </Provider>,

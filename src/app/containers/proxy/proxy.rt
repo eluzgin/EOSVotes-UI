@@ -1,0 +1,27 @@
+<rt-import name="*" as="Components" from="components" />
+<rt-import name="*" as="Containers" from="containers" />
+
+<Components.Fragment>
+
+    <Containers.Header rt-props="this.props" />
+
+    <section class="section proxy">
+    
+        <div class="container">
+
+            <h1 class="title">About Proxies</h1>
+
+            <p>I write about things I encounter while learning web programming.</p>
+
+            <h2>Stuff</h2>
+
+            <p>I write about things I encounter while learning web programming.</p>
+
+        </div>
+
+    <Components.Footer />
+
+    <Containers.ReferendumPopup   rt-props="this.props"/>
+
+
+</Components.Fragment>

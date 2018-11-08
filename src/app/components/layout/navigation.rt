@@ -2,11 +2,11 @@
 <div class="menu">
     <div class="menu__title show-for-medium">Menu</div>
     <ul class="menu__list">
-        <li><a href="#"> <i class="icon icon-info"></i> Start here</a></li>
-        <li><a href="#"> <i class="icon icon-proxy"></i> Proxy vote</a></li>
-        <li><a href="#"> <i class="icon icon-forum"></i> Forum</a></li>
-        <li><a href="#"> <i class="icon icon-referendum"></i> Referendums</a></li>
-        <li><a href="#"> <i class="icon icon-proposal"></i> Worker proposal</a></li>
+        <li><a href="/about"> <i class="icon icon-info"></i> Start here</a></li>
+        <li><a href="/proxy"> <i class="icon icon-proxy"></i> Proxy vote</a></li>
+        <li><a href="https://eos-forum.org/" target="_blank"> <i class="icon icon-forum"></i> Forum</a></li>
+        <li><a href="#referendum"> <i class="icon icon-referendum"></i> Referendum</a></li>
+        <li><a href="https://workerproposal.com/" target="_blank"> <i class="icon icon-proposal"></i> Worker proposal</a></li>
         <li class="hide-for-large">
           <a rt-if="!this.props.client" href="https://get-scatter.com/" target="new" > <i class="icon icon-login"></i> Install Scatter</a>
             <a rt-if="this.props.client" href="#" onClick="()=>this.props.getIdentity()" >
