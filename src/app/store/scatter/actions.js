@@ -1,4 +1,4 @@
-import { LOAD_SCATTER, LOAD_CLIENT, GET_IDENTITY, SET_IDENTITY, SET_ACCOUNT, SET_STATUS } from './constants';
+import { LOAD_SCATTER, LOAD_CLIENT, GET_IDENTITY, SET_IDENTITY, SET_ACCOUNT, SET_STATUS, SET_TRANSACTION_ID } from './constants';
 
 export function loadScatter(scatter) {
   return {
@@ -38,5 +38,12 @@ export function setStatus(status) {
   return {
     type: SET_STATUS,
     status,
+  };
+}
+
+export function setTransactionId(transaction_id) {
+  return {
+    type: SET_TRANSACTION_ID,
+    transaction_id,
   };
 }

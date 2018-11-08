@@ -13,10 +13,9 @@ class Home extends React.Component {
 
   componentDidMount() {
     ScatterJS.scatter.connect('EOSVotes.io').then(connected => {
-      if(connected){
-          this.props.loadScatter(ScatterJS.scatter);
-          window.scatter = null;
-      }
+      if (!connected) return false;
+      this.props.loadScatter(ScatterJS.scatter);
+      window.scatter = null;
     });
   }
 

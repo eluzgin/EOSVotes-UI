@@ -19,17 +19,19 @@
     </div>
 
     <footer class="referendum__footer small-spacing uc flex-container align-justify align-middle text-center">
-        <div rt-if="props.time_left">
-            <i class="icon icon-clock show-for-medium"></i>
-            { props.time_left } days left
+        <div rt-if="props.expires_at" >
+            <i class="icon icon-clock show-for-medium" style="display:inline;" />
+            { props.expires_at.split("T")[0] }
         </div>
-        <div>{''}</div>
+        <div style="display:inline;" >
+            {props.votes.total || 0} votes / {Math.round((props.staked.total || 0) / 10000)} EOS
+        </div>
         <div class="referendum__controls">
             <span class="green">
-                <i class="icon icon-thumbs-up" />{ props.staked.total !== 0 ? Number(((props.staked[1] ? props.staked[1] : 0) / props.staked.total)*100).toFixed(0) : 0 }%
+                <i class="icon icon-thumbs-up" style="display:inline;" />{ props.staked.total !== 0 ? Number(((props.staked[1] ? props.staked[1] : 0) / props.staked.total)*100).toFixed(0) : 0 }%
             </span>
             <span class="red">
-                <i class="icon icon-thumbs-down" />{ props.staked.total !== 0 ? Number(((props.staked[0] ? props.staked[0] : 0) / props.staked.total)*100).toFixed(0) : 0 }%
+                <i class="icon icon-thumbs-down" style="display:inline;" />{ props.staked.total !== 0 ? Number(((props.staked[0] ? props.staked[0] : 0) / props.staked.total)*100).toFixed(0) : 0 }%
             </span>
         </div>
     </footer>

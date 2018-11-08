@@ -3,7 +3,7 @@ import { networkConfig } from 'helpers';
 import Eos from 'eosjs';
 
 import { LOAD_SCATTER, GET_IDENTITY } from './constants';
-import { loadClient, setIdentity, setAccount, setStatus } from './actions';
+import { loadClient, setIdentity, setAccount, setStatus, setTransactionId } from './actions';
 import state, { selectScatter, selectIdentity, selectClient } from './selectors';
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms))
@@ -14,26 +14,46 @@ export function* voteProposal(action) {
     console.log(action);
     const identity = yield select(selectIdentity());
     const client = yield select(selectClient());
-    const tx = {
-      actions: [
-        {
-          account: 'eosforumrcpp',
-          name: 'vote',
-          data: {
-            voter: identity.name,
-            proposal_name: action.id.proposal_name,
-            vote: action.flag ? 1 : 0,
-            vote_json: '',
-          },
-          authorization: [{ actor:identity.name, permission:identity.authority }],
-        }
-      ]
+    let tx;
+    if (action.flag === -1) {
+      console.log("unvote", action.flag);
+      tx = {
+        actions: [
+          {
+            account: 'eosforumrcpp',
+            name: 'unvote',
+            data: {
+              voter: identity.name,
+              proposal_name: action.id.proposal_name,
+            },
+            authorization: [{ actor:identity.name, permission:identity.authority }],
+          }
+        ]
+      }
+    } else {
+      console.log("vote", action.flag);
+      tx = {
+        actions: [
+          {
+            account: 'eosforumrcpp',
+            name: 'vote',
+            data: {
+              voter: identity.name,
+              proposal_name: action.id.proposal_name,
+              vote: action.flag ? 1 : 0,
+              vote_json: '',
+            },
+            authorization: [{ actor:identity.name, permission:identity.authority }],
+          }
+        ]
+      }
     }
     const res = yield client.transaction(tx);
     yield put(setStatus("Voted successfully."));
-    console.log(res);
+    yield put(setTransactionId(res.processed.id));
+    console.log("voted", res);
   } catch (err) {
-    console.error(err);
+    console.error("voted", err);
     yield put(setStatus("Transaction failed."));
   }
   yield delay(3000);

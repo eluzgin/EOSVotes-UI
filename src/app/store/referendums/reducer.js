@@ -4,18 +4,24 @@ import { stringify } from 'helpers';
 
 function handleProposals(res) {
   const proposals = [];
-  Object.keys(res).map(proposal_name => {
+  for (const proposal_name of Object.keys(res)) {
     const tally = res[proposal_name];
     const proposal = Object.assign(tally.proposal, tally.stats);
-    if (typeof proposal.proposal_json === "string") proposal.proposal_json = JSON.parse(proposal.proposal_json);
+    try {
+      if (typeof proposal.proposal_json === "string") proposal.proposal_json = JSON.parse(proposal.proposal_json);
+    } catch (e) {
+      console.log(proposal_name, proposal.proposer, "was hidden due inproperly parsed JSON", proposal.proposal_json)
+      continue;
+    }
 
     // Only show proposals not yet expired (72 hours buffer)
     const expires_at = new Date(proposal.expires_at).getTime();
     const now = Date.now();
+    const hours72 = 1000 * 60 * 60 * 72;
 
-    if ((expires_at - now) < (60 * 60 * 72)) {
-      console.log(proposal.proposal_name, "was hidden due to being expired", proposal.expires_at)
-      return;
+    if (expires_at + hours72 < now) {
+      console.log(proposal_name, "was hidden due to being expired", proposal.expires_at)
+      continue;
     }
 
     // Do not show proposals with ZERO votes
@@ -24,7 +30,7 @@ function handleProposals(res) {
     //   return;
     // }
     proposals.push(proposal);
-  });
+  };
   return proposals;
 }
 
