@@ -10,11 +10,13 @@
                 <div>
                     <i class="header__icon--menu icon icon-menu hoverable" onClick="e => this.open('navigation')" />
                     <span class="header__title">
-                        <b>EOS</b>Votes
-                        <span class="header__logo">
-                            <rt-include src="./logo.svg" />
-                        </span>
-                        <b>Beta</b>
+                        <a href="/">
+                            <b>EOS</b>Votes
+                            <span class="header__logo">
+                                <rt-include src="./logo.svg" />
+                            </span>
+                            <b>Beta</b>
+                        </a>
                     </span>
                 </div>
                 <!-- right -->
