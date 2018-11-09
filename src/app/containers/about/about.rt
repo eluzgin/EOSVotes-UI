@@ -28,7 +28,7 @@
         
         <br/>
 
-        <h2 class="title">What is Referendum?</h2>
+        <h2 class="title" id="referendum">What is Referendum?</h2>
 
         <p>A vote in which EOS token holders are asked to decide on a question that impacts a change to the EOS Constitution, system-level Ricardian Contracts, or the EOSIO codebase. A simple proposal or poll allows the EOS community's voice to be heard on specific matters without changing any contracts or system code. A referendum, if passed, should produce an actionable result to enact a change on the EOS mainnet, as decided by the EOS community.</p>
         
@@ -99,8 +99,7 @@
         <br/>
 
         <ul>
-        <li>- Must be coherent, legible and well documented
-        </li>
+        <li>- Must be coherent, legible and well documented</li>
 
         <li>- Needs to have a GitHub Pull Request (includes Contract changes)</li>
 
@@ -126,11 +125,12 @@
         <br/>
 
         <ul>
-        <li>1. Rallying community support beforehand, and use what the community wants/needs to lobby a Block Producer for support.</li>
-        
-        <li>2. Use a Block Producer to submit your proposal.
+            <li>1. Rallying community support beforehand, and use what the community wants/needs to lobby a Block Producer for support.</li>
 
-        <li>3. Multi-language proposals are up to the submitter to provide and are recommended.</li></ul>
+            <li>2. Use a Block Producer to submit your proposal.
+
+            <li>3. Multi-language proposals are up to the submitter to provide and are recommended.</li>
+        </ul>
 
         <p>We encourage all to practice educated voting when voting on proposals for the EOS blockchain and community. Your well researched vote facilitates the change you wish to see on chain.</p>
 

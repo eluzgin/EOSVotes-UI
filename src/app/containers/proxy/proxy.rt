@@ -11,7 +11,11 @@
 
             <h1 class="title">Proxy Voting</h1>
 
-            <p><strong>What is a proxy in EOS?</strong> A proxy is someone you give the authority to vote on your behalf. If you do not have time to research the best Block Producer that aligns with what you find important but want to vote, you can research a voter proxy that you align with what is important to you and give them the authority to vote for you. &nbsp;Your proxy will have the ability to vote on your behalf through the referendum contract. However, we have added the feature that allows you to override that if you choose to vote on a proposal yourself. </p>
+            <p><strong>What is a proxy in EOS?</strong> A proxy is someone you give the authority to vote on your behalf.
+            If you do not have time to research the best Block Producer that aligns with what you find important but want to vote,
+            you can research a voter proxy that you align with what is important to you and give them the authority to vote for you.
+            Your proxy will have the ability to vote on your behalf through the referendum contract.
+            However, we have added the feature that allows you to override that if you choose to vote on a proposal yourself. </p>
 
             <p>Read more about <a style="color:#cfbf55;text-decoration: underline;" href="https://medium.com/coinmonks/eos-proxy-voting-everything-you-need-to-know-e4c9783249e3">Proxy Voting</a> on EOS, current <a style="color:#cfbf55;text-decoration: underline;" href="https://www.alohaeos.com/vote/proxy">Voter Proxies</a> or join the conversation on <a style="color:#cfbf55;text-decoration: underline;" href="https://t.me/eosproxies">Telegram</a>.</p>
         </div>
