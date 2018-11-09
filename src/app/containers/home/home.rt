@@ -12,7 +12,7 @@
                 <div class="home-welcome__container">
                     <div class="home-welcome__copy">
                         <h1 class="title uc">Welcome to EOSVotes.io!</h1>
-                        <p>Welcome to the EOSVotes.io! A way for you to change the things you don’t like about EOS. Please click the links below to learn more about how to use this portal.</p>
+                        <p>Welcome to the EOSVotes.io! A way for you to help shape how EOS evolves. Please click the links below to learn more about how to use this portal.</p>
                     </div>
                     <div class="spacing text-center">
                         <span class="medium-button primary-button liquid-for-small">
@@ -22,14 +22,14 @@
                         </span>
                     </div>
                 </div>
-                 <!-- Implement this later<div class="card-spacing">
+                <div class="card-spacing">
                     <p class="home-welcome__button-container">
-                        <a class="home-welcome__button">proxy vote</a>
-                        <a class="home-welcome__button">forum</a>
-                        <a class="home-welcome__button">referendum</a>
-                        <a class="home-welcome__button">worker proposals</a>
+                        <a class="home-welcome__button" href="/proxy">proxy vote</a>
+                        <a class="home-welcome__button" href="/forum">forum</a>
+                        <a class="home-welcome__button" href="/about#referendum">referendum</a>
+                        <a class="home-welcome__button" href="/wps">worker proposals</a>
                     </p>
-                </div> -->
+                </div> 
             </div>
 
             <!-- Implement this later

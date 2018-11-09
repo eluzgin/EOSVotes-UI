@@ -9,13 +9,37 @@
     
         <div class="container">
 
-            <h1 class="title">Credits</h1>
+            <h1 class="title" style="padding-bottom:30px;">Credits</h1>
 
-            <p>I write about things I encounter while learning web programming.</p>
+            <h2 style="font-size:22px;">Thoughts on the Referendum System by those that helped build it...</h2> 
 
-            <h2>Stuff</h2>
+            <p><a href="https://steemit.com/eos/@greymass/the-3-pieces-of-the-eos-referendum-system">https://steemit.com/eos/@greymass/the-3-pieces-of-the-eos-referendum-system</a></p>
+  
+            <p><a href="https://forums.eosgo.io/discussion/1561/proposed-referendum-contract-process">https://forums.eosgo.io/discussion/1561/proposed-referendum-contract-process<br /></a></p>
+  
+            <p><a href="https://www.eoscanada.com/en/a-proposed-referendum-tool-for-the-eos-mainnet-eosio.forum">https://www.eoscanada.com/en/a-proposed-referendum-tool-for-the-eos-mainnet-eosio.forum</a></p>
 
-            <p>I write about things I encounter while learning web programming.</p>
+            <p><a href="https://steemit.com/eos/@eostribe/bringing-it-all-together-a-user-centered-approach-to-eos-voting">https://steemit.com/eos/@eostribe/bringing-it-all-together-a-user-centered-approach-to-eos-voting</a></p>
+
+            <p><a href="https://steemit.com/eos/@eostribe/a-few-thoughts-on-the-eos-referendum-proposal-process">https://steemit.com/eos/@eostribe/a-few-thoughts-on-the-eos-referendum-proposal-process</a></p>
+
+            <p><a href="https://steemit.com/eos/@eosnation/daniel-keyes-discusses-the-referendum-system-at-eos-ignite-conference">https://steemit.com/eos/@eosnation/daniel-keyes-discusses-the-referendum-system-at-eos-ignite-conference</a></p>
+
+            <p><a href="https://medium.com/@eosnationbp/eos-referendum-roadmap-b0417ff8a934">https://medium.com/@eosnationbp/eos-referendum-roadmap-b0417ff8a934</a></p>
+
+            <p><a href="https://medium.com/@eosnationbp/referendum-roadmap-update-bb8223423c51">https://medium.com/@eosnationbp/referendum-roadmap-update-bb8223423c51</a></p>
+
+            <hr>
+
+            <h2 class="title">Github Links</h2>
+
+            <p><a href="https://github.com/eos42/eos-referendum">https://github.com/eos42/eos-referendum</a></p>
+  
+            <p><a href="https://github.com/eoscanada/eosio.forum">https://github.com/eoscanada/eosio.forum</a></p>
+
+            <p><a href="https://github.com/EOSTribe/EOSVotes-ui">https://github.com/EOSTribe/EOSVotes-ui</a></p>
+
+            <p><a href="https://github.com/EOS-Nation/eosvotes-tally">https://github.com/EOS-Nation/eosvotes-tally</a></p>
 
         </div>
 
