@@ -1,0 +1,25 @@
+<rt-import name="*" as="Components" from="components" />
+<rt-import name="*" as="Containers" from="containers" />
+
+<Components.Fragment>
+
+    <Containers.Header rt-props="this.props" />
+
+    <section class="section forum">
+    
+        <div class="container">
+
+        <h2 class="title">Forum</h2>
+       
+        <p>A forum on the EOS blockchain is the ideal way for the community and token holders to have conversations about current or past proposals. In the future, you will go to the proposal feed on the forum to discuss your own opinions of proposals with other community members in one central location so you don't miss any great points that are made. </p>
+
+        <p>An on-chain community forum has been built using the forum contract and can be found here: <a style="color:#cfbf55;text-decoration: underline; font-weight:bold;" href="https://eos-forum.org/" target="_blank">eos-forum.org</a></p>
+
+        </div>
+
+    <Components.Footer />
+
+    <Containers.ReferendumPopup   rt-props="this.props"/>
+
+
+</Components.Fragment>

@@ -9,13 +9,132 @@
     
         <div class="container">
 
-            <h1 class="title">About Referendum</h1>
+        <h2 class="title">New to EOS?</h2>
+        <p>If not keep scrolling to <a href="#referendum-content" style="color:#cfbf55;text-decoration: underline; font-weight:bold;"> learn more about Referendum</a>. EOS is the first and fastest decentralized self-governed blockchain which encourages its token holders, investors, and developers to share their voice through proposals and voting as a means for consensus. The EOS Blockchain is built on open source software released by Block.one, called <a href="https://eos.io/">EOSIO</a>, "The Most Powerful Infrastructure for Decentralized Applications."</p>
 
-            <p>I write about things I encounter while learning web programming.</p>
+        <br/>
 
-            <h2>Stuff</h2>
+        <hr/>
 
-            <p>I write about things I encounter while learning web programming.</p>
+        <br/>
+
+        <i><span style="font-weight: 800; font-size: 26px;">"The price good men pay for indifference to public affairs is to be ruled by evil men."</span></i>
+
+        <p><span style="font-weight: 400;">― Plato</span></p>
+
+        <br/>
+
+        <hr id="referendum-content"></hr>
+        
+        <br/>
+
+        <h2 class="title">What is Referendum?</h2>
+
+        <p>A vote in which EOS token holders are asked to decide on a question that impacts a change to the EOS Constitution, system-level Ricardian Contracts, or the EOSIO codebase. A simple proposal or poll allows the EOS community's voice to be heard on specific matters without changing any contracts or system code. A referendum, if passed, should produce an actionable result to enact a change on the EOS mainnet, as decided by the EOS community.</p>
+        
+        <p>To be an effective, decentralized, yet self-governed blockchain, the EOS codebase and governing documents can be modified through token holder consensus by way of referendum through proposing, voting, and ratification. This principle is found in the <a href="https://github.com/EOS-Mainnet/governance/blob/master/eosio.system/eosio.system-clause-constitution-rc.md#article-xi---amending" style="color:#cfbf55;text-decoration: underline; font-weight:bold;">EOS Constitution</a>.</p>
+
+        <p><strong>Article XI</strong> - <strong>Amending</strong> - This Constitution and its subordinate documents shall not be amended except by a vote of the token holders with no less than 15% vote participation among tokens and no fewer than 10% more Yes than No votes, sustained for 30 continuous days within a 120 day period. <a href="https://github.com/EOSIO/eos/blob/5068823fbc8a8f7d29733309c0496438c339f7dc/constitution.md" style="color:#cfbf55;text-decoration: underline; font-weight:bold;">Reference</a></p>
+
+        <p>Each proposal can define its own voting thresholds, but all proposals that fall under the "Constitution and its subordinate documents" must meet these predefined thresholds.</p>
+
+        <p>When you engage in voting, you are signing the Referendum Ricardian Contract.</p>
+
+        <br/>
+        <br/>
+
+        <h2 class="title">What is a Ricardian Contract?</h2>
+        <p>Ricardian Contracts are contracts that are both human and machine readable. They are presented to a user to provide the intention of the associated <strong>Smart Contract</strong>. When interacting with a proposal on the Referendum, you are agreeing to a Ricardian Contract for that action. Depending on the action you take, the appropriate Ricardian Contract will display in Scatter or your preferred UI:</p>
+
+        <br/>
+        
+        <ul>
+        <li><a href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.expire_rc.md">- Expire</a></li>
+
+        <li><a href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.propose_rc.md">- Propose</a></li>
+        
+        <li><a href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.unvote_rc.md">- Unvote</a></li>
+
+        <li><a href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.vote_rc.md">- Vote</a></li>
+        </ul>
+
+        <br/>
+        <br/>
+
+        <h2 class="title">Types of Referendum Proposals</h2>
+
+        <br/>
+
+        <ul>
+        <li><strong>Simple</strong> - polls or community consensus</li>
+
+        <li><strong>Contract</strong> (complex) - related to the Constitution, Ricardian or Smart Contracts</li>
+
+        <li><strong>System</strong> (complex) - EOSIO code related proposals</li>
+        </ul>
+
+       <p>*<span style="font-size:medium;">Contract and System proposals are both considered "Complex Proposals"</i>.</p>
+
+        <br/>
+        <br/>
+
+        <h2 class="title">Voting for a Proposal</h2>
+
+        <p>We've made it easy for any token holder to participate in a referendum at EOSvotes.io by voting on proposals that have been submitted by members of the community. Active proposals are displayed on the homepage. Find the proposal you'd like to vote on, connect your EOS account with Scatter, and select the option you'd like to vote for. The weight of your vote will be determined by your staked token balance. You'll also be able to vote for proposals using any EOS wallet that supports referendum voting.</p>
+
+        <br/>
+        <br/>
+
+        <h2 class="title">Submitting a Proposal</h2>
+        
+        <p>EOSvotes.io doesn't currently support proposal submissions. Our main objective is to educate token holders on the value of voting and to facilitate an effortless voting experience. Crafting a successful proposal that's technically feasible requires advanced knowledge of the EOSIO software and governance system. Over time, we hope to build in features to help facilitate that process for the average user. In the meantime, it is still possible for anyone to submit a proposal using one of the other various tools or wallets that support this functionality. We've included some guidelines below.</p>
+
+        <br/>
+        <br/>
+
+        <h2 class="title">Complex Proposal Guidelines</h2>
+
+        <p>Like the name, these proposals involve complex changes to EOS contractual agreements like the Constitution, Ricardian Contracts, or the system code. If your complex proposal does not meet the standard requirements, it is subject to be rejected by Block Producers.</p>
+
+        <br/>
+
+        <ul>
+        <li>- Must be coherent, legible and well documented
+        </li>
+
+        <li>- Needs to have a GitHub Pull Request (includes Contract changes)</li>
+
+        <li>- System code changes must have already been tested and stable on a public Testnet (<a href="http://jungle.cryptolions.io/" style="color:#cfbf55;text-decoration: underline; font-weight:bold;">Jungle</a>, <a href="https://www.cryptokylin.io/" style="color:#cfbf55;text-decoration: underline; font-weight:bold;">Kylin</a>, etc...)</li>
+
+        <li>- System code changes must have some form of a 3rd party security audit performed prior to submission</li>
+        </ul>
+
+        <br/>
+        <br/>
+
+        <h2 class="title">Simple Proposal Guidelines</h2>
+        
+        <p>Community consensus through polls or proposals are a great way to get a feel for what the community thinks about specific topics, ideas, events or happenings. Be respectful, and kind with your simple proposals. Slander and/or libel defamatory statements about other token holders are not productive to the community.</p>
+
+        <br/>
+        <br/>
+
+        <h2 class="title">Helpful Hints</h2>
+
+        <p>Gain added visibility for your proposal with these helpful tips:</p>
+
+        <br/>
+
+        <ul>
+        <li>1. Rallying community support beforehand, and use what the community wants/needs to lobby a Block Producer for support.</li>
+        
+        <li>2. Use a Block Producer to submit your proposal.
+
+        <li>3. Multi-language proposals are up to the submitter to provide and are recommended.</li></ul>
+
+        <p>We encourage all to practice educated voting when voting on proposals for the EOS blockchain and community. Your well researched vote facilitates the change you wish to see on chain.</p>
+
+        <br/>
 
         </div>
 
