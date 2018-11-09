@@ -16,9 +16,11 @@
                     </div>
                     <div class="spacing text-center">
                         <span class="medium-button primary-button liquid-for-small">
-                            <span class="regular hide-for-medium">New? </span>
-                            <span class="regular show-for-medium">New to eos? <i class="home-welcome__chevron icon icon-chevron-right show-for-medium" /> </span>
-                            start here.
+                            <a href="/about">
+                                <span class="regular hide-for-medium">New? </span>
+                                <span class="regular show-for-medium">New to eos? <i class="home-welcome__chevron icon icon-chevron-right show-for-medium" /> </span>
+                                start here.
+                            </a>
                         </span>
                     </div>
                 </div>
@@ -29,7 +31,7 @@
                         <a class="home-welcome__button" href="https://eosvotes.io/about#referendum">referendum</a>
                         <a class="home-welcome__button" href="/wps">worker proposals</a>
                     </p>
-                </div> 
+                </div>
             </div>
 
             <!-- Implement this later
