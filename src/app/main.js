@@ -9,6 +9,7 @@ import Credits from './containers/credits/credits';
 import Proxy from './containers/proxy/proxy';
 import Forum from './containers/forum/forum';
 import WPS from './containers/wps/wps';
+import FAQ from './containers/faq/faq';
 
 const store = configureStore();
 
@@ -23,6 +24,7 @@ function render(){
           <Route path="/proxy" component={Proxy} />
           <Route path="/forum" component={Forum} />
           <Route path="/wps" component={WPS} />
+          <Route path="/faq" component={FAQ} />
         </div>
       </Router>
     </Provider>,

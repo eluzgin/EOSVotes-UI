@@ -15,6 +15,8 @@
 
         <p>An on-chain community forum has been built using the forum contract and can be found here: <a style="color:#cfbf55;text-decoration: underline; font-weight:bold;" href="https://eos-forum.org/" target="_blank">eos-forum.org</a></p>
 
+        <br/>
+
         </div>
 
     <Components.Footer />

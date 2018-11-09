@@ -49,13 +49,13 @@
         <br/>
         
         <ul>
-        <li>- Expire (<a style="color:#cfbf55;text-decoration: underline; font-weight:bold;" href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.expire_rc.md">Reference</a>)</li>
+        <li><a href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.expire_rc.md">- Expire</a></li>
 
-        <li>- Propose (<a style="color:#cfbf55;text-decoration: underline; font-weight:bold;" href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.propose_rc.md">Reference</a>)</li>
+        <li><a href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.propose_rc.md">- Propose</a></li>
         
-        <li>- Unvote (<a style="color:#cfbf55;text-decoration: underline; font-weight:bold;" href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.unvote_rc.md">Reference</a>)</li>
+        <li><a href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.unvote_rc.md">- Unvote</a></li>
 
-        <li>- Vote (<a style="color:#cfbf55;text-decoration: underline; font-weight:bold;" href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.vote_rc.md">Reference</a>)</li>
+        <li><a href="https://github.com/eoscanada/eosio.forum/blob/master/abi/forum.vote_rc.md">- Vote</a></li>
         </ul>
 
         <br/>
