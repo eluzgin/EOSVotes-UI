@@ -5,7 +5,7 @@ import ScatterJS from 'scatter-js/dist/scatter.esm';
 import { loadScatter, getIdentity } from 'store/scatter/actions';
 import { selectClient, selectIdentity, selectAccount,selectStatus } from 'store/scatter/selectors';
 
-class About extends React.Component {
+class WPS extends React.Component {
 
   constructor(props) {
     super(props);
