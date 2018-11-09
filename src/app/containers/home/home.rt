@@ -26,7 +26,7 @@
                     <p class="home-welcome__button-container">
                         <a class="home-welcome__button" href="/proxy">proxy vote</a>
                         <a class="home-welcome__button" href="/forum">forum</a>
-                        <a class="home-welcome__button" href="/about#referendum">referendum</a>
+                        <a class="home-welcome__button" href="https://eosvotes.io/about#referendum">referendum</a>
                         <a class="home-welcome__button" href="/wps">worker proposals</a>
                     </p>
                 </div> 
