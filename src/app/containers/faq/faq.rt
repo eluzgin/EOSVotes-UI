@@ -135,6 +135,32 @@
         <p>We encourage all to practice educated voting when voting on proposals for the EOS blockchain and community. Your well researched vote facilitates the change you wish to see on chain.</p>
 
         <br/>
+        <br/>
+        
+        <h2 class="title">Proposal User Interfaces</h2>
+        
+        <p>In addition to eosvotes.io there are a number of other community maintained propsosal contract user interfaces that can be used for voting on proposals. This is a list of all known user interfaces:</p>
+        
+        <ul>
+            <li>- <a href="https://eosvotes.io" target="_blank">https://eosvotes.io (this site></a></li>
+
+            <li>- <a href="https://www.myeoskit.com/tools/referendums/proposals" target="_blank">https://www.myeoskit.com/tools/referendums/proposals</a></li>
+
+            <li>- <a href="https://bloks.io/vote/referendums" target="_blank">https://bloks.io/vote/referendums</a></li>
+
+            <li>- <a href="https://eos-forum.org/#/referendum" target="_blank">https://eos-forum.org/#/referendum</a></li>
+            
+            <li>- <a href="https://eosauthority.com/polls" target="_blank">https://eosauthority.com/polls</a></li>
+            
+            <li>- <a href="https://eostoolkit.io/community/forum/vote" target="_blank">https://eostoolkit.io/community/forum/vote</a></li>
+            
+            <li>- <a href="https://github.com/eoscanada/eosc" target="_blank">https://github.com/eoscanada/eosc/releases (command line application)</a></li>
+            
+            <li>- <a href="https://github.com/greymass/eos-voter/releases" target="_blank">https://github.com/greymass/eos-voter/releases (electron windowed wallet application)</a></li>
+                        
+        </ul>
+        
+        <br/>
 
         </div>
 
