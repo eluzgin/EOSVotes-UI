@@ -6,7 +6,7 @@
     <Containers.Header rt-props="this.props" />
 
     <section class="section credits">
-    
+
         <div class="container">
 
             <h1 class="title" style="padding-bottom:30px;">Credits</h1>
@@ -14,9 +14,9 @@
             <h2 style="font-size:22px;">Thoughts on the Referendum System by those that helped build it...</h2> 
 
             <p><a href="https://steemit.com/eos/@greymass/the-3-pieces-of-the-eos-referendum-system">https://steemit.com/eos/@greymass/the-3-pieces-of-the-eos-referendum-system</a></p>
-  
+
             <p><a href="https://forums.eosgo.io/discussion/1561/proposed-referendum-contract-process">https://forums.eosgo.io/discussion/1561/proposed-referendum-contract-process<br /></a></p>
-  
+
             <p><a href="https://www.eoscanada.com/en/a-proposed-referendum-tool-for-the-eos-mainnet-eosio.forum">https://www.eoscanada.com/en/a-proposed-referendum-tool-for-the-eos-mainnet-eosio.forum</a></p>
 
             <p><a href="https://steemit.com/eos/@eostribe/bringing-it-all-together-a-user-centered-approach-to-eos-voting">https://steemit.com/eos/@eostribe/bringing-it-all-together-a-user-centered-approach-to-eos-voting</a></p>
@@ -31,10 +31,10 @@
 
             <hr>
 
-            <h2 class="title">Github Links</h2>
+            <h2 class="title" id="github"><span class="icon icon-github"></span> GitHub</h2>
 
             <p><a href="https://github.com/eos42/eos-referendum">https://github.com/eos42/eos-referendum</a></p>
-  
+
             <p><a href="https://github.com/eoscanada/eosio.forum">https://github.com/eoscanada/eosio.forum</a></p>
 
             <p><a href="https://github.com/EOSTribe/EOSVotes-ui">https://github.com/EOSTribe/EOSVotes-ui</a></p>
