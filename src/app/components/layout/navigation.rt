@@ -3,11 +3,11 @@
     <div class="menu__title show-for-medium">Menu</div>
     <ul class="menu__list">
         <li><a href="/about"> <i class="icon icon-info"></i> Start here</a></li>
+        <li><a href="https://t.me/joinchat/HGqkxFAlvsxpRP9c6WvflQ"> <i class="icon icon-telegram"></i> Telegram</a></li>
         <li><a href="/proxy"> <i class="icon icon-proxy"></i> Proxy vote</a></li>
         <li><a href="/forum"> <i class="icon icon-forum"></i> Forum</a></li>
         <li><a href="https://eosvotes.io/about#referendum-content"> <i class="icon icon-referendum"></i> Referendum</a></li>
         <li><a href="/wps"> <i class="icon icon-proposal"></i> Worker proposal</a></li>
-        <li><a href="https://t.me/joinchat/HGqkxFAlvsxpRP9c6WvflQ"> <i class="icon icon-telegram"></i> Telegram</a></li>
         <li class="hide-for-large">
           <a rt-if="!this.props.client" href="https://get-scatter.com/" target="new" > <i class="icon icon-login"></i> Install Scatter</a>
             <a rt-if="this.props.client" href="#" onClick="()=>this.props.getIdentity()" >

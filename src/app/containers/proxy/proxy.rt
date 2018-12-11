@@ -6,7 +6,7 @@
     <Containers.Header rt-props="this.props" />
 
     <section class="section proxy">
-    
+
         <div class="container">
 
             <h1 class="title">Proxy Voting</h1>
