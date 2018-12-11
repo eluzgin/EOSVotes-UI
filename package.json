@@ -1,11 +1,11 @@
 {
+  "private": true,
   "name": "eosvotes",
   "license": "UNLICENSED",
   "scripts": {
     "start": "webpack-dev-server --hot --mode development",
     "build": "webpack --mode production",
-    "postinstall": "cp .env.example .env",
-    "test": "exit 0"
+    "deploy": "npm run build && firebase deploy --project eosvotes"
   },
   "dependencies": {
     "hammerjs": "^2.0.8",
