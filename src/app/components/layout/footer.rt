@@ -1,6 +1,8 @@
 <footer class="footer">
     Copyleft { new Date().getFullYear() }
-    <span class="show-for-medium">-</span>
+    <span class="show-for-medium">- </span>
     <br class="hide-for-medium" />
-    <a href="https://github.com/EOSTribe/EOSVotes-UI/"> github</a> - <a href="/credits">credits
+    <a href="/credits#github"><span class="icon icon-github"></span> GitHub</a>
+    - <a href="/credits">credits</a>
+    - <a href="https://t.me/joinchat/HGqkxFAlvsxpRP9c6WvflQ"><span class="icon icon-telegram"></span> Telegram</a>
 </footer>

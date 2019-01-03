@@ -3,7 +3,7 @@ import { stringify } from 'helpers';
 
 
 function handleProposals(res) {
-  const proposals = [];
+  let proposals = [];
   for (const proposal_name of Object.keys(res)) {
     const tally = res[proposal_name];
     const proposal = Object.assign(tally.proposal, tally.stats);
@@ -31,6 +31,9 @@ function handleProposals(res) {
     // }
     proposals.push(proposal);
   };
+
+  // sort by largest EOS votes
+  proposals = proposals.sort((a,b) => b.staked.total - a.staked.total);
   return proposals;
 }
 
